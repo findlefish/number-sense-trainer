@@ -80,10 +80,10 @@ const chapterOutline = [
   ["3.2.4", "Changing Between Bases: Special Case", "Changing Bases", "Use direct grouping when bases are powers of one another."],
   ["3.2.5", "Changing Bases: Sum of Powers", "Changing Bases", "Represent the number as a sum of powers of the base."],
   ["3.2.6", "Changing Bases: Miscellaneous Topics", "Changing Bases", "Pick the base strategy that minimizes conversion work."],
-  ["3.3.1", "Repeating Decimals: .aaaaa...", "Repeating Decimals", "A one-digit repeat a equals a/9."],
-  ["3.3.2", "Repeating Decimals: .ababa...", "Repeating Decimals", "A two-digit repeat ab equals ab/99."],
-  ["3.3.3", "Repeating Decimals: .abbbb...", "Repeating Decimals", "Separate the nonrepeating digit from the repeating tail."],
-  ["3.3.4", "Repeating Decimals: .abcbcbc...", "Repeating Decimals", "Use the nonrepeating prefix and repeating block formula."],
+  ["3.3.1", "In the form: .aaaaa...", "Repeating Decimals", "A one-digit repeat a equals a/9."],
+  ["3.3.2", "In the form: .ababa...", "Repeating Decimals", "A two-digit repeat ab equals ab/99."],
+  ["3.3.3", "In the form: .abbbb...", "Repeating Decimals", "Separate the nonrepeating digit from the repeating tail."],
+  ["3.3.4", "In the form: .abcbcbc...", "Repeating Decimals", "Use the nonrepeating prefix and repeating block formula."],
   ["3.4", "Modular Arithmetic", "Miscellaneous Topics", "Reduce early and often; replace large numbers with their residues."],
   ["3.5.1", "1*1! + 2*2! + ... + n*n!", "Fun with Factorials", "Use the telescoping identity k*k! = (k+1-1)k! = (k+1)! - k!."],
   ["3.5.2", "(a! +/- b!) / c!", "Fun with Factorials", "Factor out the smallest factorial before simplifying."],
@@ -8476,17 +8476,34 @@ const importedProblemSets = {
   ],
 };
 
+const standaloneExerciseNotes = {
+  "3.1.2": "PDF 目录中有这个技巧小节，但正文没有单独的 Problem Set 3.1.2；相关练习接在 Problem Set 3.1.3。",
+  "3.2.5": "PDF 目录中有这个技巧小节，但正文没有单独的 Problem Set 3.2.5；相关练习接在 Problem Set 3.2.6。",
+  "3.3.1": "PDF 目录中有这个技巧小节，但正文没有单独的 Problem Set 3.3.1；重复小数练习从 Problem Set 3.3.2 开始。",
+};
+
+function buildTechniqueDetail(id, title, hint) {
+  return `PDF 子章节 ${id}「${title}」的技巧：${hint}`;
+}
+
 const topics = chapterOutline.map(([id, title, group, hint]) => {
   const problems = importedProblemSets[id] || [];
+  const standaloneNote = standaloneExerciseNotes[id] || "";
+  const hasStandaloneExercises = problems.length > 0;
   return {
     id,
     title,
     group,
     hint,
+    technique: buildTechniqueDetail(id, title, hint),
     problems,
+    standaloneNote,
+    hasStandaloneExercises,
     icon: id.split(".").slice(-1)[0],
-    source: problems.length ? `Problem Set ${id} (${problems.length} imported)` : `Problem Set ${id} pending import`,
-    status: problems.length ? "PDF original" : "Pending import",
+    source: hasStandaloneExercises
+      ? `Problem Set ${id} (${problems.length} imported from subsection-end exercises)`
+      : standaloneNote,
+    status: hasStandaloneExercises ? "PDF original" : "No standalone exercise set",
   };
 });
 
@@ -8612,7 +8629,7 @@ function selectTopic(topic) {
   state.problemIndex = 0;
   state.streak = 0;
   els.feedback.className = "feedback";
-  els.feedback.textContent = topic.problems.length ? "Loaded PDF problem set." : "This section is ready, but original questions still need importing.";
+  els.feedback.textContent = topic.problems.length ? "Loaded PDF subsection problem set." : topic.standaloneNote;
   renderTopics();
   renderCoach();
   nextProblem();
@@ -8621,19 +8638,21 @@ function selectTopic(topic) {
 function renderCoach() {
   const t = state.topic;
   els.topicTitle.textContent = `${t.id} ${t.title}`;
-  els.ruleSummary.textContent = t.hint;
+  els.ruleSummary.textContent = t.technique;
   els.sourceSummary.textContent = t.source;
-  els.nextFocus.textContent = t.problems.length ? "Practice from the section-end exercise set" : "Import exact PDF question text";
+  els.nextFocus.textContent = t.problems.length ? "Practice from this subsection's final problem set" : "Technique-only subsection in the PDF";
   els.coachTitle.textContent = `${t.id} ${t.title}`;
   els.coachDescription.textContent =
     t.problems.length
-      ? "These questions are drawn from the exercise set at the end of this PDF subsection."
-      : "This subsection is listed as a separate category. Its hint is loaded, but the extracted PDF text did not include reliable original question statements for this problem set.";
+      ? "这些题目按 PDF 目录分类，来自该子章节末尾对应编号的 Problem Set。"
+      : t.standaloneNote;
   els.steps.innerHTML = "";
   [
     `Chapter group: ${t.group}.`,
-    `Hint: ${t.hint}`,
-    t.problems.length ? `Imported questions: ${t.problems.length}.` : "No verified original questions imported yet.",
+    `Technique: ${t.technique}`,
+    t.problems.length
+      ? `Exercise source: Problem Set ${t.id}, ${t.problems.length} imported questions.`
+      : `Exercise source: ${t.standaloneNote}`,
   ].forEach((step) => {
     const li = document.createElement("li");
     li.textContent = step;
@@ -8648,9 +8667,9 @@ function nextProblem() {
   const t = state.topic;
   if (!t.problems.length) {
     state.current = null;
-    els.expression.textContent = "Original PDF questions pending";
-    els.difficulty.textContent = "Needs import";
-    els.problemCount.textContent = "0 imported";
+    els.expression.textContent = "PDF has no standalone problem set for this subsection";
+    els.difficulty.textContent = t.status;
+    els.problemCount.textContent = "Technique only";
     els.input.value = "";
     els.input.disabled = true;
     els.form.querySelector("button[type='submit']").disabled = true;
