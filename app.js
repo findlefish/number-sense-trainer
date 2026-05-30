@@ -3418,7 +3418,7 @@ const importedProblemSets = {
   ],
   "2.1.2": [
     {
-      "prompt": "(1728) 3",
+      "prompt": "(1728)^(1/3)",
       "answer": "12"
     },
     {
@@ -3430,7 +3430,7 @@ const importedProblemSets = {
       "answer": "2744"
     },
     {
-      "prompt": "(−343) 3",
+      "prompt": "(−343)^(1/3)",
       "answer": "−7"
     },
     {
@@ -3442,7 +3442,7 @@ const importedProblemSets = {
       "answer": "4096"
     },
     {
-      "prompt": "3√ 1728 ÷ √ 36",
+      "prompt": "∛1728 / √36",
       "answer": "2"
     },
     {
@@ -3450,11 +3450,11 @@ const importedProblemSets = {
       "answer": "1331"
     },
     {
-      "prompt": "(−12)3",
+      "prompt": "(−12)^3",
       "answer": "−1728"
     },
     {
-      "prompt": "(2197) 3",
+      "prompt": "(2197)^(1/3)",
       "answer": "13"
     },
     {
@@ -3474,8 +3474,8 @@ const importedProblemSets = {
       "answer": "1728"
     },
     {
-      "prompt": "(125 ÷ 64) 3",
-      "answer": "5"
+      "prompt": "(125 / 64)^(1/3)",
+      "answer": "5/4"
     },
     {
       "prompt": "13^3",
@@ -3486,7 +3486,7 @@ const importedProblemSets = {
       "answer": "343"
     },
     {
-      "prompt": "−1331 3",
+      "prompt": "(−1331)^(1/3)",
       "answer": "−11"
     },
     {
@@ -3498,23 +3498,23 @@ const importedProblemSets = {
       "answer": "3375"
     },
     {
-      "prompt": "(*) 3√ 1730 × 145",
+      "prompt": "(*) ∛1730 × 145",
       "answer": "(*) 1653 − 1828"
     },
     {
-      "prompt": "(27 ÷ 216) 3",
-      "answer": "1"
+      "prompt": "(27 / 216)^(1/3)",
+      "answer": "1/2"
     },
     {
-      "prompt": "If x = 7 then ( x + 3)(x2 − 3x + 9)",
+      "prompt": "If x = 7 then (x + 3)(x^2 − 3x + 9)",
       "answer": "370"
     },
     {
-      "prompt": "√ 676 ÷ 3√−2197",
+      "prompt": "√676 / ∛(−2197)",
       "answer": "−2"
     },
     {
-      "prompt": "(1.728) 3",
+      "prompt": "(1.728)^(1/3)",
       "answer": "1.2"
     },
     {
@@ -3526,8 +3526,56 @@ const importedProblemSets = {
       "answer": "1331"
     },
     {
-      "prompt": "3√",
+      "prompt": "∛1.331",
       "answer": "1.1"
+    },
+    {
+      "prompt": "(*) 89 × 90 × 91",
+      "answer": "(*) 692464 − 765356"
+    },
+    {
+      "prompt": "∛.729",
+      "answer": ".9"
+    },
+    {
+      "prompt": "(*) 121^3",
+      "answer": "(*) 1682982 − 1860140"
+    },
+    {
+      "prompt": "3^4 − 6^3 + 9^2",
+      "answer": "−54"
+    },
+    {
+      "prompt": "∛1728 / √576",
+      "answer": "1/2"
+    },
+    {
+      "prompt": "√225 × ∛3375",
+      "answer": "225"
+    },
+    {
+      "prompt": "8^3 − 9^3",
+      "answer": "−217"
+    },
+    {
+      "prompt": "(*) 13^3 × 3^4",
+      "answer": "(*) 169059 − 186855"
+    },
+    {
+      "prompt": "2^3 × 5^3 × 7^3",
+      "answer": "343000"
+    },
+    {
+      "prompt": "(*) 119 × 120 × 121",
+      "answer": "(*) 1641486 − 1814374"
+    },
+    {
+      "prompt": "(*) 14^3 × 4^5",
+      "answer": "(*) 2669363 − 2950349"
+    },
+    {
+      "prompt": "8^4",
+      "answer": "4096"
     }
   ],
   "2.1.3": [
