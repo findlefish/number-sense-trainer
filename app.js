@@ -272,7 +272,7 @@ const importedProblemSets = {
       "answer": "22066"
     },
     {
-      "prompt": "114",
+      "prompt": "11^4",
       "answer": "14641"
     },
     {
@@ -1112,7 +1112,7 @@ const importedProblemSets = {
       "answer": "1011024"
     },
     {
-      "prompt": "(*) 98 2 + 972",
+      "prompt": "(*) 98^2 + 97^2",
       "answer": "(*) 18062 − 19964"
     },
     {
@@ -1130,15 +1130,15 @@ const importedProblemSets = {
       "answer": "1.225"
     },
     {
-      "prompt": "122 + 2 × 12 × 13 + 132",
+      "prompt": "12^2 + 2 × 12 × 13 + 13^2",
       "answer": "625"
     },
     {
-      "prompt": "(115)2",
+      "prompt": "(115)^2",
       "answer": "13225"
     },
     {
-      "prompt": "f (x) = 9x2 − 12x + 4, f (19)",
+      "prompt": "f (x) = 9x^2 − 12x + 4, f (19)",
       "answer": "3025"
     },
     {
@@ -1146,7 +1146,7 @@ const importedProblemSets = {
       "answer": "−24.75"
     },
     {
-      "prompt": "(*) 12 4",
+      "prompt": "(*) 12^4",
       "answer": "(*) 19699 − 21773"
     },
     {
@@ -1160,11 +1160,11 @@ const importedProblemSets = {
   ],
   "1.2.9": [
     {
-      "prompt": "582",
+      "prompt": "58^2",
       "answer": "3364"
     },
     {
-      "prompt": "(510)2",
+      "prompt": "(510)^2",
       "answer": "260100"
     },
     {
@@ -1172,7 +1172,7 @@ const importedProblemSets = {
       "answer": "2209"
     },
     {
-      "prompt": "532",
+      "prompt": "53^2",
       "answer": "2809"
     },
     {
@@ -1180,7 +1180,7 @@ const importedProblemSets = {
       "answer": "(*) 111720 − 123480"
     },
     {
-      "prompt": "562",
+      "prompt": "56^2",
       "answer": "3136"
     },
     {
@@ -1188,7 +1188,7 @@ const importedProblemSets = {
       "answer": "3481"
     },
     {
-      "prompt": "412",
+      "prompt": "41^2",
       "answer": "1681"
     }
   ],
@@ -1430,7 +1430,7 @@ const importedProblemSets = {
   ],
   "1.3.1": [
     {
-      "prompt": "2022",
+      "prompt": "202^2",
       "answer": "40804"
     },
     {
@@ -1442,15 +1442,15 @@ const importedProblemSets = {
       "answer": "253009"
     },
     {
-      "prompt": "6072",
+      "prompt": "607^2",
       "answer": "368449"
     },
     {
-      "prompt": "2082",
+      "prompt": "208^2",
       "answer": "43264"
     },
     {
-      "prompt": "3062",
+      "prompt": "306^2",
       "answer": "93636"
     },
     {
@@ -1458,7 +1458,7 @@ const importedProblemSets = {
       "answer": "259081"
     },
     {
-      "prompt": "8042",
+      "prompt": "804^2",
       "answer": "646416"
     },
     {
@@ -1466,7 +1466,7 @@ const importedProblemSets = {
       "answer": "495616"
     },
     {
-      "prompt": "4082",
+      "prompt": "408^2",
       "answer": "166464"
     },
     {
@@ -1474,19 +1474,19 @@ const importedProblemSets = {
       "answer": "362404"
     },
     {
-      "prompt": "3032",
+      "prompt": "303^2",
       "answer": "91809"
     },
     {
-      "prompt": "9092",
+      "prompt": "909^2",
       "answer": "826281"
     },
     {
-      "prompt": "4022",
+      "prompt": "402^2",
       "answer": "161604"
     },
     {
-      "prompt": "7072",
+      "prompt": "707^2",
       "answer": "499849"
     },
     {
@@ -1498,11 +1498,11 @@ const importedProblemSets = {
       "answer": "644809"
     },
     {
-      "prompt": "4042",
+      "prompt": "404^2",
       "answer": "163216"
     },
     {
-      "prompt": "5122",
+      "prompt": "512^2",
       "answer": "262144"
     },
     {
@@ -1510,7 +1510,7 @@ const importedProblemSets = {
       "answer": "37942"
     },
     {
-      "prompt": "6122",
+      "prompt": "612^2",
       "answer": "374544"
     },
     {
@@ -1518,7 +1518,7 @@ const importedProblemSets = {
       "answer": "96942"
     },
     {
-      "prompt": "7142",
+      "prompt": "714^2",
       "answer": "509796"
     },
     {
@@ -1558,7 +1558,7 @@ const importedProblemSets = {
       "answer": "15004"
     },
     {
-      "prompt": "9182",
+      "prompt": "918^2",
       "answer": "842724"
     },
     {
@@ -1570,7 +1570,7 @@ const importedProblemSets = {
       "answer": "37942"
     },
     {
-      "prompt": "5242",
+      "prompt": "524^2",
       "answer": "274576"
     },
     {
@@ -1594,7 +1594,7 @@ const importedProblemSets = {
       "answer": "144288144"
     },
     {
-      "prompt": "6672",
+      "prompt": "667^2",
       "answer": "444889"
     }
   ],
@@ -1882,109 +1882,109 @@ const importedProblemSets = {
   ],
   "1.3.3": [
     {
-      "prompt": "352 + 362",
+      "prompt": "35^2 + 36^2",
       "answer": "2521"
     },
     {
-      "prompt": "122 + 132",
+      "prompt": "12^2 + 13^2",
       "answer": "313"
     },
     {
-      "prompt": "152 + 162",
+      "prompt": "15^2 + 16^2",
       "answer": "481"
     },
     {
-      "prompt": "252 + 262",
+      "prompt": "25^2 + 26^2",
       "answer": "1301"
     },
     {
-      "prompt": "402 + 412",
+      "prompt": "40^2 + 41^2",
       "answer": "3281"
     },
     {
-      "prompt": "802 + 812",
+      "prompt": "80^2 + 81^2",
       "answer": "12961"
     }
   ],
   "1.3.4": [
     {
-      "prompt": "(11 + 10)2 + (112 − 102)",
+      "prompt": "(11 + 10)^2 + (11^2 − 10^2)",
       "answer": "462"
     },
     {
-      "prompt": "(30 + 2)2 + (302 − 22)",
+      "prompt": "(30 + 2)^2 + (30^2 − 2^2)",
       "answer": "1920"
     },
     {
-      "prompt": "(10 + 9)2 + (102 − 92)",
+      "prompt": "(10 + 9)^2 + (10^2 − 9^2)",
       "answer": "380"
     },
     {
-      "prompt": "(30 + 2)2 − (302 − 22)",
+      "prompt": "(30 + 2)^2 − (30^2 − 2^2)",
       "answer": "128"
     },
     {
-      "prompt": "242 − (202 + 42)",
+      "prompt": "24^2 − (20^2 + 4^2)",
       "answer": "160"
     },
     {
-      "prompt": "312 − (292 − 22)",
+      "prompt": "31^2 − (29^2 − 2^2)",
       "answer": "124"
     },
     {
-      "prompt": "(302 − 22) + (30 + 2) 2",
+      "prompt": "(30^2 − 2^2) + (30 + 2)^2",
       "answer": "1920"
     },
     {
-      "prompt": "812 + (80 + 1)(80 − 1)",
+      "prompt": "81^2 + (80 + 1)(80 − 1)",
       "answer": "12960"
     },
     {
-      "prompt": "552 − (502 − 52)",
+      "prompt": "55^2 − (50^2 − 5^2)",
       "answer": "550"
     },
     {
-      "prompt": "472 + 402 − 72",
+      "prompt": "47^2 + 40^2 − 7^2",
       "answer": "3760"
     },
     {
-      "prompt": "(55 + 3)2 + 552 − 32",
+      "prompt": "(55 + 3)^2 + 55^2 − 3^2",
       "answer": "6380"
     },
     {
-      "prompt": "302 − (282 − 22)",
+      "prompt": "30^2 − (28^2 − 2^2)",
       "answer": "120"
     },
     {
-      "prompt": "382 + (30 + 8)(30 − 8)",
+      "prompt": "38^2 + (30 + 8)(30 − 8)",
       "answer": "2280"
     },
     {
-      "prompt": "422 + (402 − 22)",
+      "prompt": "42^2 + (40^2 − 2^2)",
       "answer": "3360"
     },
     {
-      "prompt": "322 − (302 − 22)",
+      "prompt": "32^2 − (30^2 − 2^2)",
       "answer": "128"
     },
     {
-      "prompt": "(28 + 2)2 + (282 − 22)",
+      "prompt": "(28 + 2)^2 + (28^2 − 2^2)",
       "answer": "1680"
     },
     {
-      "prompt": "222 + 202 − 22",
+      "prompt": "22^2 + 20^2 − 2^2",
       "answer": "880"
     },
     {
-      "prompt": "452 − (402 − 52)",
+      "prompt": "45^2 − (40^2 − 5^2)",
       "answer": "450"
     },
     {
-      "prompt": "552 − 502 + 52",
+      "prompt": "55^2 − 50^2 + 5^2",
       "answer": "550"
     },
     {
-      "prompt": "(30 + 2)2 − (302 − 22)",
+      "prompt": "(30 + 2)^2 − (30^2 − 2^2)",
       "answer": "128"
     },
     {
@@ -1992,231 +1992,231 @@ const importedProblemSets = {
       "answer": "5300"
     },
     {
-      "prompt": "462 − (212 − 252)",
+      "prompt": "46^2 − (21^2 − 25^2)",
       "answer": "2300"
     }
   ],
   "1.3.5": [
     {
-      "prompt": "932 + 212",
+      "prompt": "93^2 + 21^2",
       "answer": "9090"
     },
     {
-      "prompt": "122 + 192",
+      "prompt": "12^2 + 19^2",
       "answer": "505"
     },
     {
-      "prompt": "722 + 132",
+      "prompt": "72^2 + 13^2",
       "answer": "5353"
     },
     {
-      "prompt": "822 + 122",
+      "prompt": "82^2 + 12^2",
       "answer": "6868"
     },
     {
-      "prompt": "452 + 462",
+      "prompt": "45^2 + 46^2",
       "answer": "4141"
     },
     {
-      "prompt": "362 + 572",
+      "prompt": "36^2 + 57^2",
       "answer": "4545"
     },
     {
-      "prompt": "552 + 562",
+      "prompt": "55^2 + 56^2",
       "answer": "6161"
     },
     {
-      "prompt": "372 + 672",
+      "prompt": "37^2 + 67^2",
       "answer": "5858"
     }
   ],
   "1.3.6": [
     {
-      "prompt": "732 − 722",
+      "prompt": "73^2 − 72^2",
       "answer": "145"
     },
     {
-      "prompt": "362 − 342",
+      "prompt": "36^2 − 34^2",
       "answer": "140"
     },
     {
-      "prompt": "572 − 582",
+      "prompt": "57^2 − 58^2",
       "answer": "−115"
     },
     {
-      "prompt": "672 − 662",
+      "prompt": "67^2 − 66^2",
       "answer": "133"
     },
     {
-      "prompt": "692 − 672",
+      "prompt": "69^2 − 67^2",
       "answer": "272"
     },
     {
-      "prompt": "542 − 552",
+      "prompt": "54^2 − 55^2",
       "answer": "−109"
     },
     {
-      "prompt": "672 − 652",
+      "prompt": "67^2 − 65^2",
       "answer": "264"
     },
     {
-      "prompt": "882 − 872",
+      "prompt": "88^2 − 87^2",
       "answer": "175"
     },
     {
-      "prompt": "482 − 492",
+      "prompt": "48^2 − 49^2",
       "answer": "−97"
     },
     {
-      "prompt": "972 − 962",
+      "prompt": "97^2 − 96^2",
       "answer": "193"
     },
     {
-      "prompt": "772 − 762",
+      "prompt": "77^2 − 76^2",
       "answer": "153"
     },
     {
-      "prompt": "542 − 532",
+      "prompt": "54^2 − 53^2",
       "answer": "107"
     },
     {
-      "prompt": "422 − 442",
+      "prompt": "42^2 − 44^2",
       "answer": "−172"
     },
     {
-      "prompt": "4.72 − 3.32",
+      "prompt": "4.7^2 − 3.3^2",
       "answer": "11.2"
     },
     {
-      "prompt": "1.32 − 2.62",
+      "prompt": "1.3^2 − 2.6^2",
       "answer": "−6.72"
     },
     {
-      "prompt": "652 − 642 + 632 − 622",
+      "prompt": "65^2 − 64^2 + 63^2 − 62^2",
       "answer": "254"
     },
     {
-      "prompt": "242 − 62",
+      "prompt": "24^2 − 6^2",
       "answer": "540"
     },
     {
-      "prompt": "562 − 552 + 542 − 532",
+      "prompt": "56^2 − 55^2 + 54^2 − 53^2",
       "answer": "218"
     },
     {
-      "prompt": "762 − 742",
+      "prompt": "76^2 − 74^2",
       "answer": "300"
     },
     {
-      "prompt": "3.52 − 6.52",
+      "prompt": "3.5^2 − 6.5^2",
       "answer": "−30"
     },
     {
-      "prompt": "222 − 232 + 242 − 252",
+      "prompt": "22^2 − 23^2 + 24^2 − 25^2",
       "answer": "−94"
     },
     {
-      "prompt": "552 − 502",
+      "prompt": "55^2 − 50^2",
       "answer": "525"
     },
     {
-      "prompt": "832 − 822 + 812 − 802",
+      "prompt": "83^2 − 82^2 + 81^2 − 80^2",
       "answer": "326"
     },
     {
-      "prompt": "552 − 522",
+      "prompt": "55^2 − 52^2",
       "answer": "321"
     },
     {
-      "prompt": "442 − 432 + 422 − 412",
+      "prompt": "44^2 − 43^2 + 42^2 − 41^2",
       "answer": "170"
     },
     {
-      "prompt": "1112 − 1102 + 1092 − 1082",
+      "prompt": "111^2 − 110^2 + 109^2 − 108^2",
       "answer": "438"
     },
     {
-      "prompt": "112 − 222",
+      "prompt": "11^2 − 22^2",
       "answer": "−363"
     },
     {
-      "prompt": "772 − 762 + 752 − 742",
+      "prompt": "77^2 − 76^2 + 75^2 − 74^2",
       "answer": "302"
     },
     {
-      "prompt": "632 − 572",
+      "prompt": "63^2 − 57^2",
       "answer": "720"
     },
     {
-      "prompt": "562 − 552 + 542 − 532",
+      "prompt": "56^2 − 55^2 + 54^2 − 53^2",
       "answer": "218"
     },
     {
-      "prompt": "592 − 712",
+      "prompt": "59^2 − 71^2",
       "answer": "−1560"
     },
     {
-      "prompt": "162 − 172 + 182 − 192",
+      "prompt": "16^2 − 17^2 + 18^2 − 19^2",
       "answer": "−70"
     },
     {
-      "prompt": "412 − 422 + 432 − 442",
+      "prompt": "41^2 − 42^2 + 43^2 − 44^2",
       "answer": "−170"
     },
     {
-      "prompt": "182 − 62",
+      "prompt": "18^2 − 6^2",
       "answer": "288"
     },
     {
-      "prompt": "x2 + 162 = 19 2, then x2",
+      "prompt": "x^2 + 16^2 = 19 2, then x^2",
       "answer": "105"
     },
     {
-      "prompt": "4.52 − 1.52",
+      "prompt": "4.5^2 − 1.5^2",
       "answer": "18"
     },
     {
-      "prompt": "212 − 202 + 192 − 182",
+      "prompt": "21^2 − 20^2 + 19^2 − 18^2",
       "answer": "78"
     },
     {
-      "prompt": "582 − 592 + 602 − 612",
+      "prompt": "58^2 − 59^2 + 60^2 − 61^2",
       "answer": "−238"
     },
     {
-      "prompt": "722 − 782",
+      "prompt": "72^2 − 78^2",
       "answer": "−900"
     },
     {
-      "prompt": "242 − 222 + 202 − 182",
+      "prompt": "24^2 − 22^2 + 20^2 − 18^2",
       "answer": "168"
     },
     {
-      "prompt": "892 − 862 + 832 − 802",
+      "prompt": "89^2 − 86^2 + 83^2 − 80^2",
       "answer": "1014"
     },
     {
-      "prompt": "482 − 622",
+      "prompt": "48^2 − 62^2",
       "answer": "−1540"
     },
     {
-      "prompt": "742 − 762 + 782 − 802",
+      "prompt": "74^2 − 76^2 + 78^2 − 80^2",
       "answer": "−616"
     },
     {
-      "prompt": "382 − 272",
+      "prompt": "38^2 − 27^2",
       "answer": "715"
     },
     {
-      "prompt": "312 − 332 + 352 − 372",
+      "prompt": "31^2 − 33^2 + 35^2 − 37^2",
       "answer": "−272"
     },
     {
-      "prompt": "482 − 442 + 402 − 362",
+      "prompt": "48^2 − 44^2 + 40^2 − 36^2",
       "answer": "672"
     },
     {
-      "prompt": "792 − 762 + 732 − 702",
+      "prompt": "79^2 − 76^2 + 73^2 − 70^2",
       "answer": "894"
     }
   ],
@@ -3326,7 +3326,7 @@ const importedProblemSets = {
   ],
   "2.1.1": [
     {
-      "prompt": "282",
+      "prompt": "28^2",
       "answer": "784"
     },
     {
@@ -3342,7 +3342,7 @@ const importedProblemSets = {
       "answer": "256"
     },
     {
-      "prompt": "312",
+      "prompt": "31^2",
       "answer": "961"
     },
     {
@@ -3356,7 +3356,7 @@ const importedProblemSets = {
       "answer": "12"
     },
     {
-      "prompt": "113",
+      "prompt": "11^3",
       "answer": "1331"
     },
     {
@@ -3368,11 +3368,11 @@ const importedProblemSets = {
       "answer": "−7"
     },
     {
-      "prompt": "123",
+      "prompt": "12^3",
       "answer": "1728"
     },
     {
-      "prompt": "163",
+      "prompt": "16^3",
       "answer": "4096"
     },
     {
@@ -3396,11 +3396,11 @@ const importedProblemSets = {
       "answer": "−9"
     },
     {
-      "prompt": "83",
+      "prompt": "8^3",
       "answer": "512"
     },
     {
-      "prompt": "153",
+      "prompt": "15^3",
       "answer": "3375"
     },
     {
@@ -3412,7 +3412,7 @@ const importedProblemSets = {
       "answer": "5"
     },
     {
-      "prompt": "133",
+      "prompt": "13^3",
       "answer": "2197"
     },
     {
@@ -3514,7 +3514,7 @@ const importedProblemSets = {
       "answer": "3200000"
     },
     {
-      "prompt": "272",
+      "prompt": "27^2",
       "answer": "729"
     },
     {
