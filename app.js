@@ -8658,10 +8658,6 @@ const els = {
   input: document.querySelector("#answerInput"),
   skip: document.querySelector("#skipButton"),
   feedback: document.querySelector("#feedback"),
-  ruleSummary: document.querySelector("#ruleSummary"),
-  sourceSummary: document.querySelector("#sourceSummary"),
-  exampleSummary: document.querySelector("#exampleSummary"),
-  nextFocus: document.querySelector("#nextFocus"),
   coachTitle: document.querySelector("#coachTitle"),
   coachDescription: document.querySelector("#coachDescription"),
   steps: document.querySelector("#steps"),
@@ -8804,10 +8800,6 @@ function selectTopic(topic) {
 function renderCoach() {
   const t = state.topic;
   els.topicTitle.textContent = `${t.id} ${t.title}`;
-  els.ruleSummary.textContent = formatMultilineMathText(t.technique);
-  els.sourceSummary.textContent = t.source;
-  els.exampleSummary.textContent = formatMultilineMathText(t.example);
-  els.nextFocus.textContent = t.problems.length ? "Practice from this subsection's final problem set" : "Technique-only subsection in the PDF";
   els.coachTitle.textContent = `${t.id} ${t.title}`;
   els.coachDescription.textContent =
     t.problems.length
