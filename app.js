@@ -2382,96 +2382,96 @@ const importedProblemSets = {
   ],
   "1.3.9": [
     {
-      "prompt": "11 × 11 14",
-      "answer": "8 9"
+      "prompt": "11 × 11/14",
+      "answer": "8 9/14"
     },
     {
-      "prompt": "22 × 22 25",
-      "answer": "19 9"
+      "prompt": "22 × 22/25",
+      "answer": "19 9/25"
     },
     {
-      "prompt": "19 × 19 23",
-      "answer": "15 16"
+      "prompt": "19 × 19/23",
+      "answer": "15 16/23"
     },
     {
-      "prompt": "27 × 27 32",
-      "answer": "22 25"
+      "prompt": "27 × 27/32",
+      "answer": "22 25/32"
     },
     {
-      "prompt": "16 × 16 19",
-      "answer": "13 9"
+      "prompt": "16 × 16/19",
+      "answer": "13 9/19"
     },
     {
-      "prompt": "29 × 29 34",
-      "answer": "24 25"
+      "prompt": "29 × 29/34",
+      "answer": "24 25/34"
     },
     {
-      "prompt": "31 × 31 34",
-      "answer": "28 9"
+      "prompt": "31 × 31/34",
+      "answer": "28 9/34"
     },
     {
-      "prompt": "14 × 14 17 − 3",
-      "answer": "8 9"
+      "prompt": "14 × 14/17 − 3",
+      "answer": "8 9/17"
     },
     {
-      "prompt": "11 × 11 14 + 3",
-      "answer": "11 9"
+      "prompt": "11 × 11/14 + 3",
+      "answer": "11 9/14"
     },
     {
-      "prompt": "13 × 13 16 + 13",
-      "answer": "23 9"
+      "prompt": "13 × 13/16 + 13",
+      "answer": "23 9/16"
     },
     {
-      "prompt": "13 × 13 17 + 4",
-      "answer": "13 16"
+      "prompt": "13 × 13/17 + 4",
+      "answer": "13 16/17"
     },
     {
-      "prompt": "13 × 13 14 − 13",
-      "answer": "− 13"
+      "prompt": "13 × 13/14 − 13",
+      "answer": "−13/14"
     },
     {
-      "prompt": "17 × 17 18 − 17",
-      "answer": "− 17"
+      "prompt": "17 × 17/18 − 17",
+      "answer": "−17/18"
     },
     {
-      "prompt": "22 × 22 25 − 22",
-      "answer": "−2 16"
+      "prompt": "22 × 22/25 − 22",
+      "answer": "−2 16/25"
     },
     {
-      "prompt": "14 × 14 17 − 14",
-      "answer": "−2 8"
+      "prompt": "14 × 14/17 − 14",
+      "answer": "−2 8/17"
     },
     {
-      "prompt": "17 × 1 17 21",
-      "answer": "30 16"
+      "prompt": "17 × 1 17/21",
+      "answer": "30 16/21"
     },
     {
-      "prompt": "13 × 13 16 − 13",
-      "answer": "−2 7"
+      "prompt": "13 × 13/16 − 13",
+      "answer": "−2 7/16"
     },
     {
-      "prompt": "11 × 11 12 − 11",
-      "answer": "− 11"
+      "prompt": "11 × 11/12 − 11",
+      "answer": "−11/12"
     },
     {
-      "prompt": "7 × 7 15 − 7",
-      "answer": "−3 11"
+      "prompt": "7 × 7/15 − 7",
+      "answer": "−3 11/15"
     },
     {
-      "prompt": "14 × 14 17 − 14",
-      "answer": "−2 8"
+      "prompt": "14 × 14/17 − 14",
+      "answer": "−2 8/17"
     },
     {
-      "prompt": "15 × 15 17 − 15",
-      "answer": "−1 13"
+      "prompt": "15 × 15/17 − 15",
+      "answer": "−1 13/17"
     },
     {
-      "prompt": "35 × 1 35 38",
-      "answer": "37 9"
+      "prompt": "35 × 1 35/38",
+      "answer": "37 9/38"
     },
     {
-      "prompt": "13 × 13 15 − 13",
-      "answer": "−1 11"
+      "prompt": "13 × 13/15 − 13",
+      "answer": "−1 11/15"
     }
   ],
   "1.3.10": [
@@ -8509,7 +8509,7 @@ const sectionExamples = {
   "1.3.6": "PDF technique example: For example: 54^2 − 55^2 = (54 − 55)(54 + 55) = −109 This is a pretty basic trick and is easily recognizable on the test. The following are some more practice to give you a better feel of the problems: Problems Set 1.3.6/1. 73^2 − 72^2 = 2. 36^2 − 34^2 = 3. 57^2 − 58^2 = 4. 67^2 − 66^2 = 5. 69^2 − 67^2 = 6. 54^2 − 55^2 = 7. 67^2 − 65^2 = 8. 88^2 − 87^2 = 9. 48^2 − 49^2 = 10. 97^2 − 96^2...",
   "1.3.7": "PDF technique example: Let’s look at its derivation, let n1 = a5 = 10a + 5 and n2 = b5 = 10 b + 5 then: n1 × n2 = (10a + 5) · (10b + 5) = 100(ab) + 50(a + b) + 25 = 100(ab + a + b/2 ) + 25 So what does this mean: 1",
   "1.3.8": "PDF technique example: Let’s illustrate with an example: 8 1/8 × 24 1/8 = (8 + 1/8 ) × (24 + 1/8 ) = 8 · 24 + (8 + 24) · 1/8 + 1/8 · 1/8 = 196 1/64/32 For the most part both of the whole numbers in the mixed numbers are usually divisible by the fraction you are multiplying by (in our example both 8 and 24 are divisible by 8), which means you can just write down the fractional part of the answer immediately...",
-  "1.3.9": "PDF technique example: to illustrate this trick:",
+  "1.3.9": "PDF technique example:\n11 × 11/13\n= 11 + (11 − 13) + (11 − 13)^2/13\n= 11 − 2 + 4/13\n= 9 4/13\n\nIt also works for multiplying by fractions larger than 1:\n13 × 13/12\n= 13 + (13 − 12) + (13 − 12)^2/12\n= 13 + 1 + 1/12\n= 14 1/12",
   "1.3.10": "PDF technique example: of T ricks The following is a practice set of combinations of some of the multiplication tricks already mentioned in the book. Most are approximations which occur on the third or fourth columns of the test.",
   "1.4.1": "PDF technique example: what remainder- 987654 ÷ 8 has what remainder- Look at last two digits: 56 ÷ 4 = r0 Look at last three digits: 654 ÷ 8 = r6",
   "1.4.2": "PDF technique example: For example, if we were trying to see the remainder of 366699995 when dividing by 3, rather than summing up all the digits (which would be a hassle) and then seeing the remainder when that is divided by 3, you can look at each digit and figure out what it’s remainder is when dividing by 3 then summing those. So for our example: 366699995 ∼= (0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 2) ∼= 2(mod...",
@@ -8584,11 +8584,27 @@ const sectionExamples = {
 };
 
 function buildTechniqueDetail(id, title, hint) {
-  return `PDF subsection ${id} technique for "${title}": ${hint}`;
+  return `PDF subsection ${id}: ${title}\nTechnique: ${hint}`;
 }
 
 function buildPdfExample(id) {
   return sectionExamples[id] || "PDF technique example: No technique example was found in the extracted PDF text for this subsection.";
+}
+
+function formatMultilineMathText(value) {
+  return normalizeMathText(value)
+    .replace(/^PDF technique example:\s*/i, "PDF technique example:\n")
+    .replace(/ (Here (?:is|are) [^:]{0,80}example[s]?:)/gi, "\n$1")
+    .replace(/ (Let.s illustrate[^:]{0,80}:)/gi, "\n$1")
+    .replace(/ (For example[:,]?)/gi, "\n$1")
+    .replace(/ (Example:)/g, "\n$1")
+    .replace(/ (Problem:|Solution:)/g, "\n$1")
+    .replace(/ (Units:|Ones:|Tens:|Hundreds:|Thousands:)/g, "\n$1")
+    .replace(/ (Tens\/Ones:|Thousand\/Hundreds:|Thousands\/Hundreds:|Rest of Answer:)/g, "\n$1")
+    .replace(/ (Fractional Part:|Whole Part:|Step \d+:|Answer:)/g, "\n$1")
+    .replace(/ (?=\d+\.\s)/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 
@@ -8615,7 +8631,7 @@ const topics = chapterOutline.map(([id, title, group, hint]) => {
 });
 
 let state = {
-  topic: topics[0],
+  topic: topics.find((topic) => topic.id === window.location.hash.slice(1)) || topics[0],
   current: null,
   total: 0,
   correct: 0,
@@ -8775,6 +8791,9 @@ function selectTopic(topic) {
   state.problemIndex = 0;
   state.streak = 0;
   els.topicJump.value = topic.id;
+  if (window.location.hash.slice(1) !== topic.id) {
+    window.history.replaceState(null, "", `#${topic.id}`);
+  }
   els.feedback.className = "feedback";
   els.feedback.textContent = topic.problems.length ? "Loaded PDF subsection problem set." : topic.standaloneNote;
   renderTopics();
@@ -8785,9 +8804,9 @@ function selectTopic(topic) {
 function renderCoach() {
   const t = state.topic;
   els.topicTitle.textContent = `${t.id} ${t.title}`;
-  els.ruleSummary.textContent = t.technique;
+  els.ruleSummary.textContent = formatMultilineMathText(t.technique);
   els.sourceSummary.textContent = t.source;
-  els.exampleSummary.textContent = normalizeMathText(t.example);
+  els.exampleSummary.textContent = formatMultilineMathText(t.example);
   els.nextFocus.textContent = t.problems.length ? "Practice from this subsection's final problem set" : "Technique-only subsection in the PDF";
   els.coachTitle.textContent = `${t.id} ${t.title}`;
   els.coachDescription.textContent =
@@ -8797,8 +8816,8 @@ function renderCoach() {
   els.steps.innerHTML = "";
   [
     `Chapter group: ${t.group}.`,
-    `Technique: ${t.technique}`,
-    normalizeMathText(t.example),
+    formatMultilineMathText(t.technique),
+    formatMultilineMathText(t.example),
     t.problems.length
       ? `Exercise source: Problem Set ${t.id}, ${t.problems.length} imported questions.`
       : `Exercise source: ${t.standaloneNote}`,

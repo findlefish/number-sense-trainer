@@ -385,6 +385,7 @@ small,
   margin-top: 6px;
   font-size: 14px;
   line-height: 1.35;
+  white-space: pre-line;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -428,6 +429,7 @@ small,
   color: #465450;
   line-height: 1.55;
   font-size: 14px;
+  white-space: pre-line;
 }
 
 .coach ol {
