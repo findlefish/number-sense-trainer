@@ -8488,23 +8488,109 @@ const relatedExerciseSets = {
   "3.3.1": "3.3.2",
 };
 
+const sectionExamples = {
+  "1.1": "PDF technique example: For example: 74 × 23 = Units: 3 × 4 = 1^2 Tens: 3 × 7 + 2 × 4 + 1 = 3 0 Hundreds: 2 × 7 + 3 = 17 Answer: 170^2 Where the bold represents the answer and the italicized represents the carry. Similarly, you can extend this concept of FOILing to multiply any n-digit number by m-digit number in a procedure I call “moving down the line.” Let’s look at an example of a 3-digit multiplied by a...",
+  "1.2.1": "PDF technique example: Here is an example: 523 × 11 = Ones: 1 × 3 = 3 Tens: 1 × 2 + 1 × 3 = 5 Hundreds: 1 × 5 + 1 × 2 = 7 Thousands: 1 × 5 = 5 Answer: 5753 As one can see, the result can be obtained by subsequently adding the digits along the number you’re multiplying. Be sure to keep track of the carries as well: 6798 × 11 = Ones: 8 Tens: 9 + 8 = 1 7 Hundreds: 7 + 9 + 1 = 1 7 Thousands: 6 + 7 + 1 = 1^4 Ten...",
+  "1.2.2": "PDF technique example: Let’s look at an example: 438 × 101 = Ones: 1 × 8 8 Tens: 1 × 3^3 Hundreds: 1 × 4 + 1 × 8 1^2 Thousands: 1 × 3 + 1^4 Tens Thousands: 1 × 4^4 Answer: 44238 So you see, immediately you can write down the ones/tens digits (they are the same as what you are multiplying 101 with)",
+  "1.2.3": "PDF technique example: Here are a couple of examples: 84 × 25 = 84/4 × 100 = 21 × 100 = 2100 166 × 25 = 166^4 × 100 = 41.5 × 100 = 4150 In a similar manner, you can use the same principle to divide numbers by 25 easily. The difference is you multiply by 4 and then move the decimal over to the left two places 415 25 = 415 100^4 = 415 × 4/100 = 1660 100 = 16.6",
+  "1.2.4": "PDF technique example: 76 × 75 = 76 · 3/4 · 100 = 19 × 3 × 100 = 5700 42 × 75 = 42 · 3/4 · 100 = 10",
+  "1.2.5": "PDF technique example: For example you might use 2/3 · 1000 for any value from 654 − 678. Usually you can tell for the approximation problems what fraction the test writer is really going for. Before doing the problem set, it is recommended to at least familiarize yourself with the fractions in Section 2.1.4.",
+  "1.2.6": "PDF technique example: Let’s look at an example to show the technique: 15 × 78 = 2/2 × 15 × 78 = 15 · 2 × 78/2 = 30 × 39 = 1170 So the procedure is you double one of the numbers and half the other one, then multiply",
+  "1.2.7": "PDF technique example: For example, when we are multiplying two numbers over 100 (say 104 × 103) the first two digits would be 4 × 3 = 12, how- ever if we were doing two numbers over 1000 (like 100^2 × 1007) the first three digits would be 2 × 7 = 014 not 14 like what you would be used to putting. Let’s look at the example presented above and the procedure: 100^2 × 1007 = Hundreds/Tens/Ones: 2 × 7 014 Rest of...",
+  "1.2.8": "PDF technique example: Here are a couple of examples: 85^2 = Tens/Ones: 25 Thousand/Hundreds: 8 × (8 + 1) 72 Answer: 7225 The next example shows how to compute 15^4 by applying the square ending in 5 trick twice, one time to get what 15^2 is then the other to get that result squared. 15^2 = Tens/Ones: 25 Thousands/Hundreds: 1 × (1 + 1) = 2 Answer: 225 225^2 = Tens/Ones: 25 Rest of Answer: 22 × (23) = 11 × 46...",
+  "1.2.9": "PDF technique example: Let’s illustrate with a couple of examples: 46^2 = Tens/Ones: (50 − 46)2 = 4^2 16 Rest of Answer: 25 − 4 21 Answer: 2116 57^2 = Tens/Ones: (57 − 50)2 = 7^2 49 Rest of Answer: 25 + 7 32 Answer: 3249 61^2 = Tens/Ones: (61 − 50)2 = 11^2 1 21 Rest of Answer: 25 + 11 + 1 37 Answer: 3721",
+  "1.2.10": "PDF technique example: To illustrate this concept, let’s look at an example of this type of problem: 83 × 87. Notice that both 83 and/87 are 2 away from 85. So: 83 × 87 = (85 − 2) × (85 + 2) Notice this is just the difference of two squares: (85 − 2) × (85 + 2) = 85^2 − 22 = 7225 − 4 = 7221 So the procedure is: 1. Find the middle number between the two numbers being multiplied and square it. 2. Subtract from...",
+  "1.2.11": "PDF technique example: ab × ba = (10a + b) × (10b + a) = 100(a · b) + 10(a2 + b2) + a · b Here is what we know from the above result: 1",
+  "1.3.1": "PDF technique example: for example this problem: 431^2 = 431 × 431 Ones/Tens: 31 × 31 9 61 Hundreds/Thousands: 31 × 4 + 4 × 31 + 9 = 2 × 4 × 31 + 9^2 57 Rest of Answer: 4 × 4 + 2 18 Answer: 185761 If you didn’t have 31^2 memorized, you would have to calculate it in order to do the first step in the process (very time consuming). However, if you have it memorized you would not have to do the extra steps, thus...",
+  "1.3.2": "PDF technique example: For example, the above problem would require two, two-digit multiplication and then their addition. Whereas when you factor out the 11 you are left with a simple addition and a multiplication using the 11’s trick. Another thing is that factoring usually requires the knowledge of another trick. For instance, the first problem required the knowledge of a square (21^2) while the second...",
+  "1.3.3": "PDF technique example: For example: 35^2 + 36^2 = 35^2 + (35 + 1) 2 = 2 · 35^2 + 2 · 35 + 12 = 2 · 1225 + 70 + 1 = 2521 This is a brute force technique, however, it is a lot better than squaring both of the numbers then adding them together (which you can get lost very easily doing that). Here are some more practice problems to familiarize yourself with this procedure.",
+  "1.3.4": "PDF technique example: For example: 19^2 + (10^2 − 92) = (10 + 9) 2 + (10^2 − 92) = 2 · 10^2 + 2 · 10 · 9 + 92 − 92 = 200 + 180 = 380 28 The following are some more problems to give you practice with this technique:",
+  "1.3.5": "PDF technique example: For example, if you see a problem like: 34^2 + 64^2, it looks like a diﬃcult problem where this particular trick won’t apply. However, if you switch the order of the two numbers you get 34^2 + 64^2 = 64^2 + 34^2 = (6^2 + 42) × 101 = 525^2. Generally this trick is on the third column, and it is relatively simple to notice when to apply it because if you were having to square the two...",
+  "1.3.6": "PDF technique example: For example: 54^2 − 55^2 = (54 − 55)(54 + 55) = −109 This is a pretty basic trick and is easily recognizable on the test. The following are some more practice to give you a better feel of the problems: Problems Set 1.3.6/1. 73^2 − 72^2 = 2. 36^2 − 34^2 = 3. 57^2 − 58^2 = 4. 67^2 − 66^2 = 5. 69^2 − 67^2 = 6. 54^2 − 55^2 = 7. 67^2 − 65^2 = 8. 88^2 − 87^2 = 9. 48^2 − 49^2 = 10. 97^2 − 96^2...",
+  "1.3.7": "PDF technique example: Let’s look at its derivation, let n1 = a5 = 10a + 5 and n2 = b5 = 10 b + 5 then: n1 × n2 = (10a + 5) · (10b + 5) = 100(ab) + 50(a + b) + 25 = 100(ab + a + b/2 ) + 25 So what does this mean: 1",
+  "1.3.8": "PDF technique example: Let’s illustrate with an example: 8 1/8 × 24 1/8 = (8 + 1/8 ) × (24 + 1/8 ) = 8 · 24 + (8 + 24) · 1/8 + 1/8 · 1/8 = 196 1/64/32 For the most part both of the whole numbers in the mixed numbers are usually divisible by the fraction you are multiplying by (in our example both 8 and 24 are divisible by 8), which means you can just write down the fractional part of the answer immediately...",
+  "1.3.9": "PDF technique example: to illustrate this trick:",
+  "1.3.10": "PDF technique example: of T ricks The following is a practice set of combinations of some of the multiplication tricks already mentioned in the book. Most are approximations which occur on the third or fourth columns of the test.",
+  "1.4.1": "PDF technique example: what remainder- 987654 ÷ 8 has what remainder- Look at last two digits: 56 ÷ 4 = r0 Look at last three digits: 654 ÷ 8 = r6",
+  "1.4.2": "PDF technique example: For example, if we were trying to see the remainder of 366699995 when dividing by 3, rather than summing up all the digits (which would be a hassle) and then seeing the remainder when that is divided by 3, you can look at each digit and figure out what it’s remainder is when dividing by 3 then summing those. So for our example: 366699995 ∼= (0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 + 2) ∼= 2(mod...",
+  "1.4.3": "PDF technique example: to illustrate the trick: 38 13542 ÷ 11 has what remainder- Sum of the Alternating Digits: (2 + 5 + 1) = 8 Sum of the Remaining Digits: (4 + 3) = 7 Remainder: 8 − 7 = 1 Sometimes adding then subtracting “down the digits” will be easier than finding two explicit sums then subtracting. For example, if we were finding the remainder of 3456789 ÷ 11, instead of doing (9 + 7 + 5 + 3)− (8 + 6 +...",
+  "1.4.4": "PDF technique example: for example 1225 ÷ 6 = r1 from obvious division), however, when this seems tedious, you can use a combination of the two of the tricks mentioned above (depending on the factors of the number you are dividing). Let’s look at an example: 556677 ÷ 6 has what remainder- Dividing by 2: r1 Dividing by 3: (5 + 5 + 6 + 6 + 7 + 7) = 36 ÷ 3 r0 So now the task is to find an appropriate remainder...",
+  "1.4.5": "PDF technique example: For example, if we were trying to see the remainder of 13 8 ÷ 14, the long way of doing it would be noticing that 13^2 = 169 ÷ 14 = r1 ⇒ 14 ÷ 14 = r1 or you could use this concept of negative remainders (or an example of congruencies if you are familiar with that term) to say that 13 8 ÷ 14 ⇒ (−1)8 ÷ 14 = r1. The following are some practice problems to solidify using the “algebra of...",
+  "1.4.6": "PDF technique example: The details of the proof is omitted, only the result is shown: abcd ÷ 9 = Fractional Part: a + b + c + d/9 Ones: a + b + c Tens: a + b Hundreds: a I think the gist of the trick is self explanatory, let’s look at a simple example: 3211 ÷ 9 = Fractional Part: 3 + 2 + 1 + 1 9/7/9 Ones: 3 + 2 + 1 6 Tens: 3 + 2 5 Hundreds: 3^3 Answer: 356 7/9 Here is a litt",
+  "1.4.7": "PDF technique example: So for a/40 I treat it as: a/40 = a/40 × 1^4/1/4 = a/4/10 So the technique is to divide the numerator by 4 then shift the decimal point over",
+  "1.5.1": "PDF technique example: for example 700^2 − 2007 the method works but 701^2 − 2107 it doesn ’twork). 2. Then subtract from that result the difference between the digits. Let’s look at an example: 81^2 − 218 = Step 1: (8 − 2) × 100 600 Step 2: 600 − 6 594 Answer: 594 It also works for when the subtraction is a negative number, but you need to be careful: 105 − 501 = Step 1: (1 − 5) × 100 −400 Step 2: −400 − (1...",
+  "1.5.2": "PDF technique example: to illustrate the same point: 2 5/6 − 4^2/3 = −(4^2/3 − 2 5/6 ) = −(4^4/6 − 2 5/6 ) = −(1 5/6 ) Problems Set 1.5.2/1. 2^2/3 − 3 5/6 = 2. 4^2/3 − 6^3/5 = 3. 1 5/9 − 3 5/9 = 4. 2^3/4 − 4^3/5 = 5. 1^3/7 − 3 = 6. 2^3/8 − 3 1/4 = 7. 2^3/4 − 6 7/8 = 8. 3^4/5 − 8 9/10 = 9. 3^4/9 − 5 1/3 = 10. 5 6/7 − 12 13/14 = 45/11. 3 1/6 − 6 1/3 = 12. 2 5/6 − 4^2/3 = 13. 4 7/8 − 12 23/24 = 14. 4 5/6 − 10...",
+  "1.5.3": "PDF technique example: to illustrate this trick is by example: 1/6 + 1/12 + 1/20 + 1/30 = 1/2 · 3 + 1/3 · 4 + 1/4 · 5 + 1/5 · 6 = 1 + 1 + 1 + 1/2 · 6 = 4/12 = 1/3 So the strategy when you see a series in the form of a b·(b+1) + a (b+1)·(b+2) + · · · is to add up all the numerators and then divide it by the smallest factor in the denominators multiplied by the largest factor in the denominators. Let’s look at...",
+  "1.5.4": "PDF technique example: Here is an example: 5/7 + 7/5 = 2 + (7 − 5)2/7 · 5 = 2^4/35 There are some variations to this trick. For example: 11/13 + 2/11 = 11/13 + 13/11 − 11/11 = 2 + 22/143 − 1 = 1^4/143 This is a popular variation that is used especially on the last column of the test because the trick is there but not as obvious. The following are some practice problems to help you master this trick: Problems...",
+  "1.5.5": "PDF technique example: Here is an example: 6/7 − 29/36 = 6 + 7/7 · 36 = 13/25^2 Like I said it is easy to notice when to do this problem because, if you didn’t know the formula, it would be relatively diﬃcult to solve swiftly. There is one variation to the formula which is: a b − na + 1 nb − 1 = −(a + b) b · (nb − 1) When approached with these problems, it is best to take stock of which type it is. The...",
+  "2.1.1": "PDF technique example: The following table should aid in memorization: 11^2 = 121 12^2 = 144 13^2 = 169 14^2 = 196 15^2 = 225 16^2 = 256 17^2 = 289 18^2 = 324 19^2 = 361 20^2 = 400 21^2 = 441 22^2 = 484 23^2 = 529 24^2 = 576 25^2 = 625 26^2 = 676 27^2 = 729 28^2 = 784 29^2 = 841 30^2 = 900 31^2 = 961 32^2 = 1024 33^2 = 1089 34^2 = 1156 35^2 = 1225 36^2 = 1296 37^2 = 1369 38^2 =",
+  "2.1.2": "PDF technique example: The following cubes should be memorized: 53 = 125 6^3 = 216 7^3 = 343 8^3 = 51^2 93 = 729 10^3 = 1000 11^3 = 1331 12^3 = 1728 133 = 2197 14^3 = 2744 15^3 = 3375 16^3 = 4096 173 = 4913 18^3 = 583^2 19^3 = 6859 20^3 = 8000 Again, only FOIL when necessary on the practice problems on the next page",
+  "2.1.3": "PDF technique example: For example, 7^4 = ( 72)2 = 49^2 = 2401 However, the following powers should be memorized for quick calculation: 23 = 8^3^3 = 27 5^3 = 125 24 = 16^3^4 = 81 5^4 = 625 25 = 32^3 5 = 243 5 5 = 3125 26 = 64^3 6 = 729 27 = 128^3 7 = 2187 28 = 256 29 = 51^2 210 = 1024 The following are problems concerning higher powers of certain integers. 54",
+  "2.1.4": "PDF technique example: For example, if you only had 1/11 memorized as 9 1/11 %, but you need to know what 5/11 is, then you could simply multiply by 5: 5 × 1/11 = 5 × ( 9 1/11 % ) = 45 5/11 % Although memorization of all fractions is ideal, this method will result in correctly answering the ques- tion, albeit a lot slower.",
+  "2.1.5": "PDF technique example: They are: 999 999 = 27 × 37 77 77 = 1001 13 3367 3367 = 10101^3 1430 1430 = 10010 7 1073 1073 = 29 × 37 154 154 = 200^2 13 1443 1443 = 10101 7",
+  "2.1.6": "PDF technique example: For example, 62 to express 42 in roman numerals it would not be 42 =XXXXII, it would be 42 =XLII. To circumvent the problem of putting four of the same numerals consecutively, you use a method of “subtraction.” Anytime a numeral of lesser value is placed in front of a numeral of greater value, you subtract from the larger numeral the small numeral. So in our case 40 is represented by...",
+  "2.1.7": "PDF technique example: the other two, you can always use Euler’s formula of: Faces + Vertices − Edges = 2 to get the missing value",
+  "2.1.8": "PDF technique example: The following is an example where these approximations are useful: 64 (e × π)4 = e4 × π4 = e · e3 · ( π2)2 ≈ e · 20 · 100 ≈ e · 2000 ≈ 5400 The following are more practice problems concerning these approximations:",
+  "2.1.9": "PDF technique example: onversions The following are important conversion factors for distances: 1 mile = 5280 ft",
+  "2.1.10": "PDF technique example: for example 1ft.= 12in.), however when asked to find how many cubic inches are in cubic feet, they want to revert back to the linear conversion, which is incorrect (1ft.3 ̸= 12in. 3). When converting between linear distance to areas, and volumes you must square or cube the conversion factor appropriately. So in our example, we know that: 1ft. = 12in. ⇒ 1ft.3 = (12) 3in.3 = 1728in.3...",
+  "2.1.11": "PDF technique example: for example, the amount of cups in a gallon doesn’t need to be explicitly stated, but it would be helpful to have it memorized so you don’t have to multiply how many quarts in a gallon, how many pints in a quart, and how many cups in a pint), it is recommended that everything in the table should be memorized: 1 gallon = 4 quarts 1 quart = 2 pints 1 pint = 2 cups 1 gallon = 16 cups 1...",
+  "2.1.12": "PDF technique example: Here are the conversion factors: Fahrenheit → Celcius: C = 5/9 (F − 32) Celcius → Fahrenheit: F = 9/5 C + 32 A couple of important degrees which pop-up frequently is that 32 ◦F = 0 ◦C, 21^2 ◦F = 100 ◦C, and −40◦F = −40◦C",
+  "2.2.1": "PDF technique example: Here is another example problem: The sum of four consecutive even numbers is 140, what is the small- est- For this one you can represent the sum by ( n − 2) + (n) + (n + 2) + (n + 4) = 140, so dividing the number by 4 will get you the integer between the second and third even number. So 140 ÷ 4 = 35, so the two middle integers are 34 and 36, making the smallest integer 32. So from this...",
+  "2.2.2": "PDF technique example: aware, the fibonacci sequence follows the recursive relationship of Fn−2 + Fn−1 = Fn",
+  "2.2.3": "PDF technique example: Here is an example to display both method: Example: Find the number of relatively prime integers less than 20. 20 = 2^2 · 5 # of Relatively Prim Integers = (2 − 1) · (5 − 1) · (22−1) · (51−1) = 4 · 2 = 8 or # of Relatively Prim Integers = 1/2 · 4/5 × 20 = 8 Sum of Relatively Prime Integers less than N ∑= (# of Relatively Prime Integers) × n/2 Example: Find the sum of the relatively...",
+  "2.2.4": "PDF technique example: gonal would be drawn twice, so the total number of diagonals is: # of Diagonals = n · (n − 3) 2 As an example lets look at the number of diagonals in a hexagon: # of Diagonals in a Hexagon = 6 · 3/2 = 9",
+  "2.2.5": "PDF technique example: of Exterior Angles: 360 ◦ Exterior Angle: 360◦ n Interior Angle: 180 ◦ − 360◦ n = 180◦(n − 2) n Sum of Interior Angles: n · 180◦(n − 2) n = 180(n − 2) If you were to only remember one of the above formulas, let it be that the sum of the exterior angles of every regular polygon be equal to 360 ◦",
+  "2.2.6": "PDF technique example: For example, the idea of a triangular number is the amount of dots which can be arranged into an equilateral triangle (1, 3, 6,...). The following are formulas for these “geometric” numbers: 79 Triangular: Tn = n(n + 1) 2 Square: Sn = n(2n − 0) 2 = n2 Pentagonal: Pn = n(3n − 1) 2 Hexagonal: Hn = n(4n − 2) 2 Heptagonal: En = n(5n − 3) 2 Octagonal: On = n(6n − 4) 2 M-Gonal: Mn = n[(M −...",
+  "2.2.7": "PDF technique example: For example, the sides of a right triangle are integers, one of its sides is 9, what is the hypotenuse- Where this gets it’s foundation is from the Pythagorean Theorem which states that a2 + b2 = c2. If the smallest side is given (call it a, then we can express a2 = c2 − b2 = ( c − b)(c + b)). Now is where the trick comes into play. The goal becomes to find two numbers that when...",
+  "2.2.8": "PDF technique example: F ormulas Area of an Equilateral Triangle when knowing the side-length s: Area = s2 · √ 3/4 Area of an Equilateral Triangle when knowing the height h: Area = h2 · √ 3/3 Finding the height when given the side length s: Height = s · √ 3/2 Example: An equilateral triangle’s perimeter is 12",
+  "2.2.9": "PDF technique example: knowing the above formulas, a couple of other ones are: Face Diagonal of a Cube = s √ 2 Body Diagonal of a Cube = s √ 3",
+  "2.2.10": "PDF technique example: Here is an example: 7C4 = 7! 4!(7 − 4)! = 7 · 6 · 5/3 · 2 = 35 With combinations and permutations (and factorials in general) you want to look at ways of canceling factors from the factorial to ease in calculation. In addition, the following is a list of the factorials which should be memorized for quick access: 3! = 6^4! = 24 5! = 120 6! = 720 7! = 5040 8! = 40320 9! = 362880 10! =...",
+  "2.2.11": "PDF technique example: Now to find the reference angle is is just θ − 180◦ = 210 ◦ − 180◦ = 30 ◦",
+  "2.2.12": "PDF technique example: for example this example: sin(10◦) cos(20◦) + sin(20◦) cos(10◦) With out using the sum to difference formula, this would be impossible to calculate, however after using the formula you get: sin(10◦) cos(20◦) + sin(20◦) cos(10◦) = sin(10 ◦ + 20◦) = sin(30 ◦) = 1/2 The following are some practice problems using these identities:",
+  "2.2.13": "PDF technique example: ollowing as a rough primer: The general equation for any sine/cosine plot is: y = A sin[B(x − C)] + D Amplitude: |A/Period: 2π B Phase Shift: C Vertical Shift: D (Up if > 0, Down if < 0) Example: Find the period of y = 3 sin(πx − 2) + 8",
+  "2.2.14": "PDF technique example: When approached with a parabola in the form of f (x) = Ax2 + Bx + x, the coordinate of the vertex is: (h, k) = ( −B/2A, f (−B/2A ) )",
+  "2.2.15": "PDF technique example: following question: Find the value for k such that the quadratic 3 x2 − x − 2k = 0 has equal roots",
+  "3.1.1": "PDF technique example: Here is another example: GCD (108, 140) = GCD (32, 108) = GCD (12, 32) = GCD (8, 12) = GCD (4, 8) = 4 If at any point in that process you notice what the GCD of the two numbers is by observation, you can cut down on the amount of steps in computation. For computing the LCM between two numbers a and b, I use the formula: LCM (a, b) = a × b GCD (a.b) So to find what the LCM is, we must...",
+  "3.1.2": "PDF technique example: Examples of an abundant number is 12 (1 + 2 + 3 + 4 + 6 = 16 > 12) and 18 (1 + 2 + 3 + 6 + 9 = 21 > 18). An interesting property of abundant numbers is that any multiple of a perfect or abundant number is abundant. Knowing this is very beneficial to the number sense test. As you can assume through the process of elimination, a deficient number has the sum of the proper divisors less...",
+  "3.1.3": "PDF technique example: Here is an example to clear things up: 96 Example: Find the Sum of the Coeﬃcients of ( x + y)6. Solution: Well let x = 1 and y = 1 which lead to the Sum of the Coeﬃcients = (1 + 1) 6 = 64. An interesting side note on this is when asked to find the Sum of the Coeﬃcients of ( x − y)n it will always be 0 because by letting x = 1 and y = 1 you get the Sum of the Coeﬃcients = (1 − 1)n = 0....",
+  "3.1.4": "PDF technique example: of the Roots Define a polynomial by pn = anxn + an−1xn−1 + an−2xn−2 · · · a1x1 + a0 = 0",
+  "3.1.5": "PDF technique example: For example, let’s find the units digit of 3 47, knowing: 99/31^3 Units Digit: 3/32 9 Units Digit: 9/33 27 Units Digit: 7/34 81 Units Digit: 1/35 243 Units Digit: 3/36 729 Units Digit: 9/37 2187 Units Digit: 7/38 6561 Units Digit: 1 From this you can see it repeats every 4 th power. So in order to see what is the units digit you can divide the power in question by 4 then see what the...",
+  "3.1.6": "PDF technique example: The rules to remember are as followed: 101 xa · xb = xa+b xa xb = xa−b (xa)b = xab The following are problems concerning each type: Product Rule: Let 3 x = 70",
+  "3.1.7": "PDF technique example: example of how approximations of logs can be calculated: 200 log 200 = 200 log(2 · 100) = 200 · (log 2 + log 100) ≈ 200 · (.3 + 2) = 460 The following are some more practice problems: 103",
+  "3.1.8": "PDF technique example: For example: √ 12 × √ 27 = √ 12 × √ 3 × √ 9 = √ 36 × √ 9 = 6 × 3 = 18 Usually the best approach is to figure out what you can take away from one of the square roots and multiply the other one by it. So from the above example, notice that we can take a 3 away from the 37 to multiply the 12 with, leading to just √ 36 × √ 9 which are easy square roots to calculate. With this method, there...",
+  "3.1.9": "PDF technique example: For example: 3√ 830584. Now the procedure would be as followed: 1. Figure out how many digits you are going to have by noticing how many three-digit “sets” there are. Most will only be two digit numbers, however this is not guaranteed. 2. To find out the units digit, look at the units digit of the number given and think about what number cubed would give that result. 3. After that, you...",
+  "3.1.10": "PDF technique example: Recall that i = √−1",
+  "3.1.11": "PDF technique example: For example if you are given a function f (x) = 3/2 x − 2 and you want to calculate f −1(x) at the point x = 3, you don ’t want to do the standard procedure for finding inverses (switch the x and y variables and solve for y) which would be: x = 3/2 y − 2 ⇒ y = (x + 2) · 2/3 at x=3: ⇒ y = (3 + 2) · 2/3 = 10/3 Not only do you solve for the function, you have to remember the function while...",
+  "3.1.12": "PDF technique example: For example, you might want to keep in mind: squares, cubes, factorials, and fibonacci numbers. Let’s look at some example problems: Problem: Find the next term of 1, 5, 13, 25, 41,... Solution I: So for this, notice that you are adding to each term 4, 8, 12, 16 respectively. So each time you are incrementing the addition by 4 so, the next term will simply be 16 + 4 added to 41 which is...",
+  "3.1.13": "PDF technique example: involve applying the definitions of Odds and Probability which are: Probability = Desired Outcomes Total Outcomes Odds = Desired Outcomes Undesirable Outcomes So the probability of rolling snake-eyes on a dice would be 1/36 while the odds of doing this would be 1/35",
+  "3.1.14": "PDF technique example: Let sets A = {M, E, N, T, A, L}and B = {M, A, T, H }then: Intersection: The intersection between A and B (notated as C = A ∩ B) is defined to be elements which are in both sets A and B",
+  "3.2.1": "PDF technique example: to illustrate how to go “backwards.” Convert 51 10 to base-6: 1. Well we know 6^2 = 36 and 6^3 = 216, so the highest power which divides 51 is 6^2. 2. 36 goes into 51 one time, so our 3 rd digit is 1. 3. The remainder when dividing 51 by 36 is 15. 4. Now we see how many times 6 1 goes into 15 (which is 2 times, so our 2 nd digits is 2). 5. The remainder when dividing 15 by 6 is 3. 6. 60...",
+  "3.2.2": "PDF technique example: For example, let’s look at how we see.125 in base-10.125 = 1 · (.1) + 2 · (.01) + 5 · (.001) = 1 · 10−1 + 2 · 10−2 + 5 · 10−3 You can display this in terms of fractions as well: = 1/10 + 2/100 + 5 1000 = 1/10 + 1/50 + 1/200 = 20 + 4 + 1/200 = 1/8 Similar to the previous session, we can replace the powers of ten by the power of any fraction. Let’s look at converting.3216 to a base-10...",
+  "3.2.3": "PDF technique example: Let’s look at an example where I would employ this technique: 234 × 34 + 124 = 11 × 3 + 6 = 39 = 213^4 However, when numbers are larger, this might not be the case, so let’s look at the most popular operations on the number sense test which are addition (and subsequently subtraction) and multiplication (division is usually not tested, so I will exclude expl",
+  "3.2.4": "PDF technique example: For example, if we are converting 1001001^2 into base-4, you would take 1001001 in groups of two (since 2^2 = 4) and converting each group into base-4. Let’s see how it would look: 120 Convert 1001001^2 to base-4 First Digit: 01^2 14 Second Digit: 10^2 24 Third Digit: 00^2 04 Fourth Digit: 1^2 14 Answer: 10214 Let’s look at an example where the converting base is that of the original...",
+  "3.2.5": "PDF technique example: For example purposes let’s look at the sum 1 + 2 + 4 + 8 + 16 + 32 + 64. If we represented them as binary it would be: 1 + 2 + 4 + 8 + 16 + 32 + 64 = 1 · 20 + 1 · 21 + 1 · 22 + 1 · 23 + 1 · 24 + 1 · 25 + 1 · 26 = 1111111^2 11111112 = 10000000^2 − 12 ⇒ 27 − 1 = 128 − 1 = 127 Although this method is easiest with binary, you can apply it to other powers as well, as long as you are...",
+  "3.2.6": "PDF technique example: for example: Problem: Convert the decimal.333 · · ·7 into a base-10 fraction. Solution: The above problem relies on using the formula for the sum of an infinite geometric series:.333 · · ·7 = 3/7 + 3/49 + 3/343 + · · · = 3 7/1 − 1/7 = 3/7 × 7/6 = 1/2 Another problem which relies on understanding of how the derivation of finding the remainder of a num- ber when dividing by 9, only in a...",
+  "3.3.1": "PDF technique example: For example:.44444... = 4/9",
+  "3.3.2": "PDF technique example: Here is an example:.242424... = 24/99 = 8/33 You can extend the concept for any sort of continuously repeating fractions. For example,.abcabcabc... = abc/999, and so on.",
+  "3.3.3": "PDF technique example: = a/10 + b/100 + b/1000 + · · · = a/10 + b/100 1 − 1/10 = a/10 + b/90 However we can continue and rewrite the fraction as: a/10 + b/90 = 9 · a + b/90 = (10 · a + b) − a/90 Lets take a step back to see what this means",
+  "3.3.4": "PDF technique example: Here is an example:.437373737... = 437 − 4/990 = 433 990 It is important for the number sense test to reduce all fractions. This can sometimes be the tricky part. The easiest way to check for reducibility is to see if you can divide the numerator by 2, 3,or 5. In the above example, 433 is not divisible by 2, 3, 5 so the fraction is in its lowest form. Here is an example where you can...",
+  "3.4": "PDF technique example: for example all of the sections dealing with finding remainders when dividing by 3, 9, 11, etc...). Here is a basic understanding of what is going on with modular arithmetic. When dividing two numbers a and b results in a quotient q and a remainder of r we say that a ÷ b = q + r b. With modular arithmetic, we are only concerned with the remainder so the expression of a ÷ b = q + r b ⇒ a...",
+  "3.5.1": "PDF technique example: 1 · 1! + 2 · 2! + · · · + n · n! = ( n + 1)! − 1 The simplest case would be to compute sums like: 1 · 1! + 2 · 2! + 3 · 3! + 4 · 4! = (4 + 1)! − 1 = 120 − 1 = 119 There are slight variations which could be asked (the easiest of which would be leaving out some terms)",
+  "3.5.2": "PDF technique example: for example: 3! + 4! − 5! 3! = 3! · (1 + 4 − 5 · 4) 3! = 1 + 4 − 20 = −15",
+  "3.5.3": "PDF technique example: For example: 4! ∼= x(mod 6), 0 ≤ x ≤ 5, x =- Well we know that 4! = 4 · 3 · 2 · 1 = 4 · 6 ∼= 0(mod 6) ⇒ x = 0. The following are some more problems to give you some practice:",
+  "3.6.1": "PDF technique example: For example: lim x→3/3x2 − 4 = 3 · 32 − 4 = 23 However certain problems, which when passing the limit, might lead to a 0/0 violation. In this case, you want to see if there are any common factors that you can cancel so that passing the limit doesn ’t give you an indeterminate form. Let’s look at an example: lim x→2 (x − 2)(x + 3) (x + 5)(x − 2) = lim x→2 (x + 3) (x + 5) = 5/7 If we had...",
+  "3.6.2": "PDF technique example: ired, so let’s see how we can take the derivative of a polynomial: Define f (x) = anxn + an−1xn−1 + · · · + a1x1 + a0x0 Then f ′(x) = an(n)xn−1 + an−1(n − 1)xn−2 + · · · + a1(1)x0 So the procedure is you multiply the coeﬃcient by the power and then lower the power (notice that a constant after differentiating disappears)",
+  "3.6.3": "PDF technique example: ws a generic polynomial being integrated: ∫ b a anxn+an−1xn−1+· · ·+a1x1+a0x0dx = F (x) = ( an n + 1 xn+1 + an−1 n xn + · · · + a1/2 x2 + a0/1 x1 )b a = F (b)−F (a) Let’s look at an example: 131 Evaluate ∫ 2 0/3x2 − x dx"
+};
+
 function buildTechniqueDetail(id, title, hint) {
   return `PDF subsection ${id} technique for "${title}": ${hint}`;
 }
 
-function buildPdfExample(id, problems) {
-  const sourceId = problems.length ? id : relatedExerciseSets[id];
-  const sourceProblems = problems.length ? problems : importedProblemSets[sourceId] || [];
-  if (!sourceProblems.length) {
-    return "PDF example: This subsection is technique-only in the PDF.";
-  }
-
-  const firstProblem = sourceProblems[0];
-  const prompt = displayExpression(getProblemPrompt(firstProblem));
-  const answer = formatAnswer(getProblemAnswer(firstProblem));
-  const sourceLabel = sourceId === id ? `Problem Set ${id}` : `related Problem Set ${sourceId}`;
-  return `PDF example from ${sourceLabel}: ${prompt}${answer ? ` = ${answer}` : ""}`;
+function buildPdfExample(id) {
+  return sectionExamples[id] || "PDF technique example: No technique example was found in the extracted PDF text for this subsection.";
 }
+
 
 const topics = chapterOutline.map(([id, title, group, hint]) => {
   const problems = importedProblemSets[id] || [];
@@ -8516,7 +8602,7 @@ const topics = chapterOutline.map(([id, title, group, hint]) => {
     group,
     hint,
     technique: buildTechniqueDetail(id, title, hint),
-    example: buildPdfExample(id, problems),
+    example: buildPdfExample(id),
     problems,
     standaloneNote,
     hasStandaloneExercises,
@@ -8593,12 +8679,19 @@ function evaluateExpression(expression) {
   return Function(`"use strict"; return (${expression});`)();
 }
 
+function normalizeMathText(value) {
+  return String(value)
+    .replaceAll("\u00d7", "x")
+    .replaceAll("\u6885", "/")
+    .replaceAll("\u9234\uad2d", "∫")
+    .replaceAll("\u9234\u6a94\u6a9b", "'")
+    .replaceAll("\u9234\u6a94\u6a9a", "'")
+    .replace(/(\d|[a-zA-Z])\s*\|\s*(\d|[a-zA-Z])/g, "$1/$2");
+}
+
 function displayExpression(expression) {
-  return String(expression)
-    .replaceAll("*", "x")
-    .replaceAll("×", "x")
-    .replaceAll("/", "÷")
-    .replaceAll("\u6885", "÷");
+  return normalizeMathText(expression)
+    .replaceAll("*", "x");
 }
 
 function getProblemPrompt(problem) {
@@ -8694,7 +8787,7 @@ function renderCoach() {
   els.topicTitle.textContent = `${t.id} ${t.title}`;
   els.ruleSummary.textContent = t.technique;
   els.sourceSummary.textContent = t.source;
-  els.exampleSummary.textContent = t.example;
+  els.exampleSummary.textContent = normalizeMathText(t.example);
   els.nextFocus.textContent = t.problems.length ? "Practice from this subsection's final problem set" : "Technique-only subsection in the PDF";
   els.coachTitle.textContent = `${t.id} ${t.title}`;
   els.coachDescription.textContent =
@@ -8705,7 +8798,7 @@ function renderCoach() {
   [
     `Chapter group: ${t.group}.`,
     `Technique: ${t.technique}`,
-    t.example,
+    normalizeMathText(t.example),
     t.problems.length
       ? `Exercise source: Problem Set ${t.id}, ${t.problems.length} imported questions.`
       : `Exercise source: ${t.standaloneNote}`,
