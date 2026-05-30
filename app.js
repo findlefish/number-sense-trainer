@@ -95,28 +95,94 @@ const chapterOutline = [
 
 const importedProblemSets = {
   "1.1": [
-    "95 * 30", "90 * 78", "51 * 11", "83 * 51",
-    "64 * 53", "65 * 81", "92 * 76", "25 * 46",
-    "94 * 92", "27 * 64", "34 * 27", "11 * 77",
-    "44 * 87", "86 * 63", "54 * 92", "83 * 68",
-    "72 * 65", "81 * 96", "57 * 89", "25 * 98",
-    "34 * 32", "88 * 76", "22 * 11", "36 * 69",
-    "35 * 52", "15 * 88", "62 * 48", "56 * 40",
-    "62 * 78", "57 * 67", "28 * 44", "80 * 71",
-    "51 * 61", "81 * 15", "64 * 14", "47 * 37",
-    "79 * 97", "99 * 87", "49 * 54", "29 * 67",
-    "38 * 98", "75 * 47", "77 * 34", "49 * 94",
-    "71 * 29", "85 * 66", "13 * 65", "64 * 11",
-    "62 * 15", "43 * 65", "74 * 72", "49 * 41",
-    "23 * 70", "72 * 75", "53 * 59", "82 * 91",
-    "14 * 17", "67 * 27", "85 * 25", "25 * 99",
-    "137 * 32", "428 * 74", "996 * 47", "654 * 45",
-    "443 * 39", "739 * 50", "247 * 87", "732 * 66",
-    "554 * 77", "324 * 11", "111 * 54", "885 * 78",
-    "34 * 655", "52 * 532", "33 * 334", "45 * 301",
-    "543 * 543", "606 * 212", "657 * 322", "543 * 230",
-    "111 * 121", "422 * 943", "342 * 542", "789 * 359",
-    "239 * 795", "123 * 543", "683 * 429", "222 * 796",
+    "95 * 30",
+    "90 * 78",
+    "51 * 11",
+    "83 * 51",
+    "64 * 53",
+    "65 * 81",
+    "92 * 76",
+    "25 * 46",
+    "94 * 92",
+    "27 * 64",
+    "34 * 27",
+    "11 * 77",
+    "44 * 87",
+    "86 * 63",
+    "54 * 92",
+    "83 * 68",
+    "72 * 65",
+    "81 * 96",
+    "57 * 89",
+    "25 * 98",
+    "34 * 32",
+    "88 * 76",
+    "22 * 11",
+    "36 * 69",
+    "35 * 52",
+    "15 * 88",
+    "62 * 48",
+    "56 * 40",
+    "62 * 78",
+    "57 * 67",
+    "28 * 44",
+    "80 * 71",
+    "51 * 61",
+    "81 * 15",
+    "64 * 14",
+    "47 * 37",
+    "79 * 97",
+    "99 * 87",
+    "49 * 54",
+    "29 * 67",
+    "38 * 98",
+    "75 * 47",
+    "77 * 34",
+    "49 * 94",
+    "71 * 29",
+    "85 * 66",
+    "13 * 65",
+    "64 * 11",
+    "62 * 15",
+    "43 * 65",
+    "74 * 72",
+    "49 * 41",
+    "23 * 70",
+    "72 * 75",
+    "53 * 59",
+    "82 * 91",
+    "14 * 17",
+    "67 * 27",
+    "85 * 25",
+    "25 * 99",
+    "137 * 32",
+    "428 * 74",
+    "996 * 47",
+    "654 * 45",
+    "443 * 39",
+    "739 * 50",
+    "247 * 87",
+    "732 * 66",
+    "554 * 77",
+    "324 * 11",
+    "111 * 54",
+    "885 * 78",
+    "34 * 655",
+    "52 * 532",
+    "33 * 334",
+    "45 * 301",
+    "543 * 543",
+    "606 * 212",
+    "657 * 322",
+    "543 * 230",
+    "111 * 121",
+    "422 * 943",
+    "342 * 542",
+    "789 * 359",
+    "239 * 795",
+    "123 * 543",
+    "683 * 429",
+    "222 * 796"
   ],
   "1.2.1": [
     {
@@ -1057,7 +1123,7 @@ const importedProblemSets = {
     },
     {
       "prompt": "94 × 98",
-      "answer": "8212"
+      "answer": "9212"
     },
     {
       "prompt": "94 × 91",
@@ -1116,7 +1182,7 @@ const importedProblemSets = {
       "answer": "(*) 18062 − 19964"
     },
     {
-      "prompt": "192 × 32 × 22",
+      "prompt": "19^2 × 3^2 × 2^2",
       "answer": "12996"
     }
   ],
@@ -1346,7 +1412,7 @@ const importedProblemSets = {
       "answer": "(*) 4745 − 5245"
     },
     {
-      "prompt": "(*) 4.93 × 3.33",
+      "prompt": "(*) 4.9^3 × 3.3^3",
       "answer": "(*) 4016 − 4440"
     },
     {
@@ -1358,7 +1424,7 @@ const importedProblemSets = {
       "answer": "(*) 3035 − 3355"
     },
     {
-      "prompt": "(*) 4.83 × 6.33",
+      "prompt": "(*) 4.8^3 × 6.3^3",
       "answer": "(*) 26270 − 29036"
     },
     {
@@ -1370,7 +1436,7 @@ const importedProblemSets = {
       "answer": "14400"
     },
     {
-      "prompt": "(*) 5.13 × 7.93",
+      "prompt": "(*) 5.1^3 × 7.9^3",
       "answer": "(*) 62132 − 68673"
     },
     {
@@ -1600,11 +1666,11 @@ const importedProblemSets = {
   ],
   "1.3.2": [
     {
-      "prompt": "82 + 242",
+      "prompt": "8^2 + 24^2",
       "answer": "640"
     },
     {
-      "prompt": "272 + 92",
+      "prompt": "27^2 + 9^2",
       "answer": "810"
     },
     {
@@ -1616,7 +1682,7 @@ const importedProblemSets = {
       "answer": "0"
     },
     {
-      "prompt": "332 + 112",
+      "prompt": "33^2 + 11^2",
       "answer": "1210"
     },
     {
@@ -1624,7 +1690,7 @@ const importedProblemSets = {
       "answer": "−660"
     },
     {
-      "prompt": "3.92 + 1.32",
+      "prompt": "3.9^2 + 1.3^2",
       "answer": "16.9"
     },
     {
@@ -1636,7 +1702,7 @@ const importedProblemSets = {
       "answer": "1280"
     },
     {
-      "prompt": "192 + 19",
+      "prompt": "19^2 + 19",
       "answer": "380"
     },
     {
@@ -1656,7 +1722,7 @@ const importedProblemSets = {
       "answer": "960"
     },
     {
-      "prompt": "512 + 51 × 49",
+      "prompt": "51^2 + 51 × 49",
       "answer": "5100"
     },
     {
@@ -1664,7 +1730,7 @@ const importedProblemSets = {
       "answer": "660"
     },
     {
-      "prompt": "212 + 72",
+      "prompt": "21^2 + 7^2",
       "answer": "490"
     },
     {
@@ -1676,7 +1742,7 @@ const importedProblemSets = {
       "answer": "384"
     },
     {
-      "prompt": "1.22 + 3.62",
+      "prompt": "1.2^2 + 3.6^2",
       "answer": "14.4"
     },
     {
@@ -1696,11 +1762,11 @@ const importedProblemSets = {
       "answer": "484"
     },
     {
-      "prompt": "492 + 49",
+      "prompt": "49^2 + 49",
       "answer": "2450"
     },
     {
-      "prompt": "292 + 29",
+      "prompt": "29^2 + 29",
       "answer": "870"
     },
     {
@@ -1708,7 +1774,7 @@ const importedProblemSets = {
       "answer": "256"
     },
     {
-      "prompt": "592 + 59",
+      "prompt": "59^2 + 59",
       "answer": "3540"
     },
     {
@@ -1728,7 +1794,7 @@ const importedProblemSets = {
       "answer": "1080"
     },
     {
-      "prompt": "692 + 69",
+      "prompt": "69^2 + 69",
       "answer": "4830"
     },
     {
@@ -1736,7 +1802,7 @@ const importedProblemSets = {
       "answer": "2002"
     },
     {
-      "prompt": "113 − 112",
+      "prompt": "11^3 − 11^2",
       "answer": "1210"
     },
     {
@@ -1744,7 +1810,7 @@ const importedProblemSets = {
       "answer": "2160"
     },
     {
-      "prompt": "792 + 79",
+      "prompt": "79^2 + 79",
       "answer": "6320"
     },
     {
@@ -1756,11 +1822,11 @@ const importedProblemSets = {
       "answer": "363"
     },
     {
-      "prompt": "1192 + 119",
+      "prompt": "119^2 + 119",
       "answer": "14280"
     },
     {
-      "prompt": "392 + 39",
+      "prompt": "39^2 + 39",
       "answer": "1560"
     },
     {
@@ -1780,7 +1846,7 @@ const importedProblemSets = {
       "answer": "0"
     },
     {
-      "prompt": "112 − 113",
+      "prompt": "11^2 − 11^3",
       "answer": "−1210"
     },
     {
@@ -1812,7 +1878,7 @@ const importedProblemSets = {
       "answer": "3300"
     },
     {
-      "prompt": "122 + 242",
+      "prompt": "12^2 + 24^2",
       "answer": "720"
     },
     {
@@ -1828,7 +1894,7 @@ const importedProblemSets = {
       "answer": "1056"
     },
     {
-      "prompt": "1092 + 109",
+      "prompt": "109^2 + 109",
       "answer": "11990"
     },
     {
@@ -1860,7 +1926,7 @@ const importedProblemSets = {
       "answer": "4662"
     },
     {
-      "prompt": "142 − 282",
+      "prompt": "14^2 − 28^2",
       "answer": "−588"
     },
     {
@@ -2088,7 +2154,7 @@ const importedProblemSets = {
       "answer": "11.2"
     },
     {
-      "prompt": "1.3^2 − 2.6^2",
+      "prompt": "1.3^2 − 2.9^2",
       "answer": "−6.72"
     },
     {
@@ -2256,95 +2322,95 @@ const importedProblemSets = {
   ],
   "1.3.8": [
     {
-      "prompt": "4 1 4 × 8 1 4",
-      "answer": "35 1"
+      "prompt": "4 1/4 × 8 1/4",
+      "answer": "35 1/16"
     },
     {
-      "prompt": "8 2 3 × 8 1 3",
-      "answer": "72 2"
+      "prompt": "8 2/3 × 8 1/3",
+      "answer": "72 2/9"
     },
     {
-      "prompt": "3 4 5 × 3 1 5",
-      "answer": "12 4"
+      "prompt": "3 4/5 × 3 1/5",
+      "answer": "12 4/25"
     },
     {
-      "prompt": "4 2 3 × 6 1 4",
-      "answer": "29 1"
+      "prompt": "4 2/3 × 6 1/4",
+      "answer": "29 1/6"
     },
     {
-      "prompt": "12 1 4 × 8 1 4",
-      "answer": "101 1"
+      "prompt": "12 1/4 × 8 1/4",
+      "answer": "101 1/16"
     },
     {
-      "prompt": "15 1 6 × 9 1 6",
-      "answer": "139 1"
+      "prompt": "15 1/6 × 9 1/6",
+      "answer": "139 1/36"
     },
     {
-      "prompt": "6 1 6 × 12 1 6",
-      "answer": "75 1"
+      "prompt": "6 1/6 × 12 1/6",
+      "answer": "75 1/36"
     },
     {
-      "prompt": "11 1 11 × 22 1 11",
-      "answer": "245 1"
+      "prompt": "11 1/11 × 22 1/11",
+      "answer": "245 1/121"
     },
     {
-      "prompt": "25 2 5 × 5 2 5",
-      "answer": "137 4"
+      "prompt": "25 2/5 × 5 2/5",
+      "answer": "137 4/25"
     },
     {
       "prompt": "5.2 × 10.2",
       "answer": "53.04"
     },
     {
-      "prompt": "8 2 3 × 4 2 3",
-      "answer": "40 4"
+      "prompt": "8 2/3 × 4 2/3",
+      "answer": "40 4/9"
     },
     {
-      "prompt": "7 1 7 × 14 1 7",
-      "answer": "101 1"
+      "prompt": "7 1/7 × 14 1/7",
+      "answer": "101 1/49"
     },
     {
-      "prompt": "5 1 5 × 10 1 5",
-      "answer": "53 1"
+      "prompt": "5 1/5 × 10 1/5",
+      "answer": "53 1/25"
     },
     {
-      "prompt": "5 1 5 × 25 1 5",
-      "answer": "131 1"
+      "prompt": "5 1/5 × 25 1/5",
+      "answer": "131 1/25"
     },
     {
-      "prompt": "( 5 2 )2",
-      "answer": "29 4"
+      "prompt": "(5 2/5)^2",
+      "answer": "29 4/25"
     },
     {
-      "prompt": "8 1 8 × 16 1 8",
-      "answer": "131 1"
+      "prompt": "8 1/8 × 16 1/8",
+      "answer": "131 1/64"
     },
     {
-      "prompt": "10 5 6 × 12 4 5",
-      "answer": "138 2"
+      "prompt": "10 5/6 × 12 4/5",
+      "answer": "138 2/3"
     },
     {
-      "prompt": "3 1 2 × 5 6 7",
-      "answer": "21 7"
+      "prompt": "3 1/2 × 6 1/6",
+      "answer": "21 7/12"
     },
     {
-      "prompt": "11 × 11 10 11",
+      "prompt": "11 × 11 10/11",
       "answer": "131"
     },
     {
-      "prompt": "6 2 3 × 9 2 3",
-      "answer": "64 4"
+      "prompt": "6 2/3 × 9 2/3",
+      "answer": "64 4/9"
     },
     {
-      "prompt": "( 12 2 )2",
-      "answer": "160 4"
+      "prompt": "(12 2/3)^2",
+      "answer": "160 4/9"
     },
     {
-      "prompt": "7 1 7 × 49 1 7",
-      "answer": "351 1"
+      "prompt": "7 1/7 × 49 1/7",
+      "answer": "351 1/49"
     },
     {
-      "prompt": "3 3 4 × 2 2 5",
+      "prompt": "3 3/4 × 2 2/5",
       "answer": "9"
     },
     {
@@ -2352,20 +2418,20 @@ const importedProblemSets = {
       "answer": "9.03"
     },
     {
-      "prompt": "6 × 6 5 6",
+      "prompt": "6 × 6 5/6",
       "answer": "41"
     },
     {
-      "prompt": "( 6 2 )2",
-      "answer": "44 4"
+      "prompt": "(6 2/3)^2",
+      "answer": "44 4/9"
     },
     {
       "prompt": "15.2 × 5.2",
       "answer": "79.04"
     },
     {
-      "prompt": "4 3 5 × 4 2 3",
-      "answer": "21 7"
+      "prompt": "4 3/5 × 4 2/3",
+      "answer": "21 7/15"
     },
     {
       "prompt": "3.125 × 1.6",
@@ -2376,8 +2442,8 @@ const importedProblemSets = {
       "answer": "5.7"
     },
     {
-      "prompt": "2 2 5 × 5 2 5",
-      "answer": "12 24"
+      "prompt": "2 2/5 × 5 2/5",
+      "answer": "12 24/25"
     }
   ],
   "1.3.9": [
@@ -2467,7 +2533,7 @@ const importedProblemSets = {
     },
     {
       "prompt": "35 × 1 35/38",
-      "answer": "37 9/38"
+      "answer": "67 9/38"
     },
     {
       "prompt": "13 × 13/15 − 13",
@@ -2504,7 +2570,7 @@ const importedProblemSets = {
       "answer": "(*) 39398 − 43545"
     },
     {
-      "prompt": "(*) 44 × 25 × 112",
+      "prompt": "(*) 44 × 25 × 11^2",
       "answer": "(*) 126445 − 139755"
     },
     {
@@ -2628,7 +2694,7 @@ const importedProblemSets = {
       "answer": "(*) 150292 − 166114"
     },
     {
-      "prompt": "242 × 183 ÷ 64",
+      "prompt": "24^2 × 18^3 / 6^4",
       "answer": "2592"
     },
     {
@@ -3066,68 +3132,68 @@ const importedProblemSets = {
   ],
   "1.5.2": [
     {
-      "prompt": "2 2 3 − 3 5 6",
-      "answer": "−1 1"
+      "prompt": "2 2/3 − 3 5/6",
+      "answer": "−1 1/6"
     },
     {
-      "prompt": "4 2 3 − 6 3 5",
-      "answer": "−1 14"
+      "prompt": "4 2/3 − 6 3/5",
+      "answer": "−1 14/15"
     },
     {
-      "prompt": "1 5 9 − 3 5 9",
+      "prompt": "1 5/9 − 3 5/9",
       "answer": "−2"
     },
     {
-      "prompt": "2 3 4 − 4 3 5",
-      "answer": "−1 17"
+      "prompt": "2 3/4 − 4 3/5",
+      "answer": "−1 17/20"
     },
     {
-      "prompt": "1 3 7 − 3",
-      "answer": "−1 4"
+      "prompt": "1 3/7 − 3",
+      "answer": "−1 4/7"
     },
     {
-      "prompt": "2 3 8 − 3 1 4",
-      "answer": "− 7"
+      "prompt": "2 3/8 − 3 1/4",
+      "answer": "−7/8"
     },
     {
-      "prompt": "2 3 4 − 6 7 8",
-      "answer": "−4 1"
+      "prompt": "2 3/4 − 6 7/8",
+      "answer": "−4 1/8"
     },
     {
-      "prompt": "3 4 5 − 8 9 10",
-      "answer": "−5 1"
+      "prompt": "3 4/5 − 8 9/10",
+      "answer": "−5 1/10"
     },
     {
-      "prompt": "3 4 9 − 5 1 3",
-      "answer": "−1 8"
+      "prompt": "3 4/9 − 5 1/3",
+      "answer": "−1 8/9"
     },
     {
-      "prompt": "5 6 7 − 12 13 14",
-      "answer": "−7 1"
+      "prompt": "5 6/7 − 12 13/14",
+      "answer": "−7 1/14"
     },
     {
-      "prompt": "3 1 6 − 6 1 3",
-      "answer": "−3 1"
+      "prompt": "3 1/6 − 6 1/3",
+      "answer": "−3 1/6"
     },
     {
-      "prompt": "2 5 6 − 4 2 3",
-      "answer": "−1 5"
+      "prompt": "2 5/6 − 4 2/3",
+      "answer": "−1 5/6"
     },
     {
-      "prompt": "4 7 8 − 12 23 24",
-      "answer": "−8 1"
+      "prompt": "4 7/8 − 12 23/24",
+      "answer": "−8 1/12"
     },
     {
-      "prompt": "4 5 6 − 10 11 12",
-      "answer": "−6 1"
+      "prompt": "4 5/6 − 10 11/12",
+      "answer": "−6 1/12"
     },
     {
-      "prompt": "2 3 5 − 7 1 10",
-      "answer": "−4 1"
+      "prompt": "2 3/5 − 7 1/10",
+      "answer": "−4 1/2"
     },
     {
-      "prompt": "1 4 5 − 3 2 5",
-      "answer": "−1 3"
+      "prompt": "1 4/5 − 3 2/5",
+      "answer": "−1 3/5"
     }
   ],
   "1.5.3": [
@@ -3330,7 +3396,7 @@ const importedProblemSets = {
       "answer": "784"
     },
     {
-      "prompt": "3.22",
+      "prompt": "3.2^2",
       "answer": "10.24"
     },
     {
@@ -3361,7 +3427,7 @@ const importedProblemSets = {
     },
     {
       "prompt": "14 × 14 × 14",
-      "answer": "3744"
+      "answer": "2744"
     },
     {
       "prompt": "(−343) 3",
@@ -3380,7 +3446,7 @@ const importedProblemSets = {
       "answer": "2"
     },
     {
-      "prompt": "114 ÷ 11",
+      "prompt": "11^4 / 11",
       "answer": "1331"
     },
     {
@@ -3392,7 +3458,7 @@ const importedProblemSets = {
       "answer": "13"
     },
     {
-      "prompt": "(−729)",
+      "prompt": "(−729)^(1/3)",
       "answer": "−9"
     },
     {
@@ -3452,11 +3518,11 @@ const importedProblemSets = {
       "answer": "1.2"
     },
     {
-      "prompt": "83 × 53",
+      "prompt": "8^3 × 5^3",
       "answer": "64000"
     },
     {
-      "prompt": "115 ÷ 121",
+      "prompt": "11^5 / 121",
       "answer": "1331"
     },
     {
@@ -3466,51 +3532,51 @@ const importedProblemSets = {
   ],
   "2.1.3": [
     {
-      "prompt": "53 + 33 + 23",
+      "prompt": "5^3 + 3^3 + 2^3",
       "answer": "160"
     },
     {
-      "prompt": "23 − 33 − 43",
+      "prompt": "2^3 − 3^3 − 4^3",
       "answer": "−83"
     },
     {
-      "prompt": "( √ 64 − √ 36)5",
+      "prompt": "(√64 − √36)^5",
       "answer": "32"
     },
     {
-      "prompt": "5x = 125, x5",
+      "prompt": "5^x = 125, x^5",
       "answer": "243"
     },
     {
-      "prompt": "43 − 53",
+      "prompt": "4^3 − 5^3",
       "answer": "−61"
     },
     {
-      "prompt": "2x+1 = 32, x − 1",
+      "prompt": "2^(x+1) = 32, x−1",
       "answer": "3"
     },
     {
-      "prompt": "23 + 33 + 53",
+      "prompt": "2^3 + 3^3 + 5^3",
       "answer": "160"
     },
     {
-      "prompt": "53 − 33",
+      "prompt": "5^3 − 3^3",
       "answer": "98"
     },
     {
-      "prompt": "3√125 × 512",
+      "prompt": "∛125 × ∛512",
       "answer": "40"
     },
     {
-      "prompt": "23 + 33 + 43 − 53",
+      "prompt": "2^3 + 3^3 + 4^3 − 5^3",
       "answer": "−26"
     },
     {
-      "prompt": "x3 = 64, so 3 x",
+      "prompt": "x^3 = 64, so 3^x",
       "answer": "81"
     },
     {
-      "prompt": "45 × 55",
+      "prompt": "4^5 × 5^5",
       "answer": "3200000"
     },
     {
@@ -3518,95 +3584,95 @@ const importedProblemSets = {
       "answer": "729"
     },
     {
-      "prompt": "If x 5 = −32, then 5 x",
+      "prompt": "If x^5 = −32, then 5^x",
       "answer": ".04"
     },
     {
-      "prompt": "25 × 53",
+      "prompt": "2^5 × 5^3",
       "answer": "4000"
     },
     {
-      "prompt": "84 × 54",
+      "prompt": "8^4 × 5^4",
       "answer": "2560000"
     },
     {
-      "prompt": "(*) 5 5 + 44 + 33 + 22 + 11",
+      "prompt": "(*) 5^5 + 4^4 + 3^3 + 2^2 + 1^1",
       "answer": "(*) 3242 − 3584"
     },
     {
-      "prompt": "26 × 54",
+      "prompt": "2^6 × 5^4",
       "answer": "40000"
     },
     {
-      "prompt": "5x−1 = 3125, x + 1",
+      "prompt": "5^(x−1) = 3125, x + 1",
       "answer": "7"
     },
     {
-      "prompt": "23 − 33 − 53",
+      "prompt": "2^3 − 3^3 − 5^3",
       "answer": "−144"
     },
     {
-      "prompt": "34 23 · 53",
+      "prompt": "3^4 / (2^3 · 5^3)",
       "answer": ".081"
     },
     {
-      "prompt": "63 + 43 + 23",
+      "prompt": "6^3 + 4^3 + 2^3",
       "answer": "288"
     },
     {
-      "prompt": "34 + 43 = 5 · x. x",
+      "prompt": "3^4 + 4^3 = 5 · x. x",
       "answer": "29"
     },
     {
-      "prompt": "(*) 5 1 + 42 + 33 + 24 + 15",
+      "prompt": "(*) 5^1 + 4^2 + 3^3 + 2^4 + 1^5",
       "answer": "(*) 61 − 69"
     },
     {
-      "prompt": "9x = 243, x",
+      "prompt": "9^x = 243, x",
       "answer": "2.5"
     },
     {
-      "prompt": "83 × 53",
+      "prompt": "8^3 × 5^3",
       "answer": "64000"
     },
     {
-      "prompt": "23 × 83 × 53",
+      "prompt": "2^3 × 8^3 × 5^3",
       "answer": "512000"
     },
     {
-      "prompt": "25 × 34 × 52",
-      "answer": "648000"
-    },
-    {
-      "prompt": "24 × 72 × 53",
-      "answer": "98000"
-    },
-    {
-      "prompt": "42 × 52 × 62",
-      "answer": "14400"
-    },
-    {
-      "prompt": "25 × 33 × 52",
-      "answer": "21600"
-    },
-    {
-      "prompt": "23 × 34 × 55",
-      "answer": "2025000"
-    },
-    {
-      "prompt": "(33 − 23 + 13) × 53",
-      "answer": "2500"
-    },
-    {
-      "prompt": "25 × 34 × 52",
+      "prompt": "2^5 × 3^4 × 5^2",
       "answer": "64800"
     },
     {
-      "prompt": "25 × 34 × 55",
+      "prompt": "2^4 × 7^2 × 5^3",
+      "answer": "98000"
+    },
+    {
+      "prompt": "4^2 × 5^2 × 6^2",
+      "answer": "14400"
+    },
+    {
+      "prompt": "2^5 × 3^3 × 5^2",
+      "answer": "21600"
+    },
+    {
+      "prompt": "2^3 × 3^4 × 5^5",
+      "answer": "2025000"
+    },
+    {
+      "prompt": "(3^3 − 2^3 + 1^3) × 5^3",
+      "answer": "2500"
+    },
+    {
+      "prompt": "2^5 × 3^4 × 5^2",
+      "answer": "64800"
+    },
+    {
+      "prompt": "2^5 × 3^4 × 5^5",
       "answer": "8100000"
     },
     {
-      "prompt": "23 × 32 × 42 × 53",
+      "prompt": "2^3 × 3^2 × 4^2 × 5^3",
       "answer": "144000"
     }
   ],
@@ -3737,7 +3803,7 @@ const importedProblemSets = {
     },
     {
       "prompt": ".0625 +.125 +.25",
-      "answer": "7"
+      "answer": "7/16"
     },
     {
       "prompt": "55 5 9 % of 27 is:",
@@ -3983,7 +4049,7 @@ const importedProblemSets = {
     },
     {
       "prompt": "36 × 3.367",
-      "answer": "121.121"
+      "answer": "121.212"
     },
     {
       "prompt": "715 × 49",
@@ -4830,7 +4896,7 @@ const importedProblemSets = {
       "answer": "207"
     },
     {
-      "prompt": "12 + 22 + 32 + 42 + 52 + 62",
+      "prompt": "1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2",
       "answer": "91"
     },
     {
@@ -4878,7 +4944,7 @@ const importedProblemSets = {
       "answer": "242"
     },
     {
-      "prompt": "13 − 23 + 33 − 43 + 53",
+      "prompt": "1^3 − 2^3 + 3^3 − 4^3 + 5^3",
       "answer": "81"
     },
     {
@@ -4930,8 +4996,8 @@ const importedProblemSets = {
       "answer": "11"
     },
     {
-      "prompt": "(63 + 43 + 23) − (53 + 33 + 13)",
-      "answer": "141"
+      "prompt": "(6^3 + 4^3 + 2^3) − (5^3 + 3^3 + 1^3)",
+      "answer": "135"
     },
     {
       "prompt": "3 − 1 − 1 3 − 1 9 − 1 27 − · · ·",
@@ -4942,7 +5008,7 @@ const importedProblemSets = {
       "answer": "9 1"
     },
     {
-      "prompt": "33 − 43 − 23 + 53",
+      "prompt": "3^3 − 4^3 − 2^3 + 5^3",
       "answer": "80"
     },
     {
@@ -8473,7 +8539,7 @@ const importedProblemSets = {
       "prompt": "∫ 3 4x 3 dx = 4 Additional Problems The following are assortment of problems which don’t occur frequently enough to warrant a section in this book:",
       "answer": "6"
     }
-  ],
+  ]
 };
 
 const standaloneExerciseNotes = {
