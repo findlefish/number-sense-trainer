@@ -8508,7 +8508,7 @@ const sectionExamples = {
   "1.3.5": "PDF technique example: For example, if you see a problem like: 34^2 + 64^2, it looks like a diﬃcult problem where this particular trick won’t apply. However, if you switch the order of the two numbers you get 34^2 + 64^2 = 64^2 + 34^2 = (6^2 + 42) × 101 = 525^2. Generally this trick is on the third column, and it is relatively simple to notice when to apply it because if you were having to square the two...",
   "1.3.6": "PDF technique example: For example: 54^2 − 55^2 = (54 − 55)(54 + 55) = −109 This is a pretty basic trick and is easily recognizable on the test. The following are some more practice to give you a better feel of the problems: Problems Set 1.3.6/1. 73^2 − 72^2 = 2. 36^2 − 34^2 = 3. 57^2 − 58^2 = 4. 67^2 − 66^2 = 5. 69^2 − 67^2 = 6. 54^2 − 55^2 = 7. 67^2 − 65^2 = 8. 88^2 − 87^2 = 9. 48^2 − 49^2 = 10. 97^2 − 96^2...",
   "1.3.7": "PDF technique example: Let’s look at its derivation, let n1 = a5 = 10a + 5 and n2 = b5 = 10 b + 5 then: n1 × n2 = (10a + 5) · (10b + 5) = 100(ab) + 50(a + b) + 25 = 100(ab + a + b/2 ) + 25 So what does this mean: 1",
-  "1.3.8": "PDF technique example: Let’s illustrate with an example: 8 1/8 × 24 1/8 = (8 + 1/8 ) × (24 + 1/8 ) = 8 · 24 + (8 + 24) · 1/8 + 1/8 · 1/8 = 196 1/64/32 For the most part both of the whole numbers in the mixed numbers are usually divisible by the fraction you are multiplying by (in our example both 8 and 24 are divisible by 8), which means you can just write down the fractional part of the answer immediately...",
+  "1.3.8": "PDF technique example:\n8 1/8 × 24 1/8\n= (8 + 1/8) × (24 + 1/8)\n= 8 · 24 + (8 + 24) · 1/8 + 1/8 · 1/8\n= 196 1/64\n\nAnother PDF example:\n9 1/3 × 9 2/3\n= 9(9 + 1) + 2/9\n= 90 2/9",
   "1.3.9": "PDF technique example:\n11 × 11/13\n= 11 + (11 − 13) + (11 − 13)^2/13\n= 11 − 2 + 4/13\n= 9 4/13\n\nIt also works for multiplying by fractions larger than 1:\n13 × 13/12\n= 13 + (13 − 12) + (13 − 12)^2/12\n= 13 + 1 + 1/12\n= 14 1/12",
   "1.3.10": "PDF technique example: of T ricks The following is a practice set of combinations of some of the multiplication tricks already mentioned in the book. Most are approximations which occur on the third or fourth columns of the test.",
   "1.4.1": "PDF technique example: what remainder- 987654 ÷ 8 has what remainder- Look at last two digits: 56 ÷ 4 = r0 Look at last three digits: 654 ÷ 8 = r6",
@@ -8698,7 +8698,9 @@ function normalizeMathText(value) {
     .replaceAll("\u9234\uad2d", "∫")
     .replaceAll("\u9234\u6a94\u6a9b", "'")
     .replaceAll("\u9234\u6a94\u6a9a", "'")
-    .replace(/(\d|[a-zA-Z])\s*\|\s*(\d|[a-zA-Z])/g, "$1/$2");
+    .replace(/(\d|[a-zA-Z])\s*\|\s*(\d|[a-zA-Z])/g, "$1/$2")
+    .replace(/\b(\d{1,3})\s+(\d{1,2})\s+(\d{1,2})(?=\s*(?:%|x|×|÷|\/|−|-|\+|=|\.{3}|$))/g, "$1 $2/$3")
+    .replace(/\b(\d{1,2})\s+(\d{1,2})(?=\s*%)/g, "$1/$2");
 }
 
 function displayExpression(expression) {
@@ -8740,8 +8742,8 @@ function almostEqual(input, answer) {
   if (Number.isFinite(numeric) && Number.isFinite(answer)) {
     return Math.abs(numeric - answer) < 0.000001;
   }
-  const normalizedInput = cleaned.toLowerCase().replace(/\s+/g, " ").replaceAll("×", "x").replaceAll("÷", "/");
-  const normalizedAnswer = String(answer).toLowerCase().replace(/\s+/g, " ").replaceAll("×", "x").replaceAll("÷", "/");
+  const normalizedInput = normalizeMathText(cleaned).toLowerCase().replace(/\s+/g, " ").replaceAll("×", "x").replaceAll("÷", "/");
+  const normalizedAnswer = normalizeMathText(answer).toLowerCase().replace(/\s+/g, " ").replaceAll("×", "x").replaceAll("÷", "/");
   return normalizedInput === normalizedAnswer;
 }
 
