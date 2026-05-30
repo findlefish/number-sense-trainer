@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Sense Trainer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Trick topics">
+        <div class="brand">
+          <div class="brand-mark">NS</div>
+          <div>
+            <h1>Number Sense Trainer</h1>
+            <p>PDF subsection practice</p>
+          </div>
+        </div>
+
+        <nav id="topicList" class="topic-list"></nav>
+
+        <section class="challenge-panel">
+          <div>
+            <span class="label">Challenge</span>
+            <strong>10:00 sprint</strong>
+          </div>
+          <button id="challengeButton" class="icon-button" type="button" aria-label="Start 10 minute challenge">
+            <span aria-hidden="true">&gt;</span>
+          </button>
+        </section>
+      </aside>
+
+      <main class="trainer">
+        <header class="topbar">
+          <div>
+            <p id="modeLabel">Practice mode</p>
+            <h2 id="topicTitle">1.1 Introduction: FOILing When Multiplying</h2>
+          </div>
+          <div class="stat-strip" aria-label="Practice stats">
+            <div>
+              <span id="timer">00:00</span>
+              <small>time</small>
+            </div>
+            <div>
+              <span id="accuracy">100%</span>
+              <small>accuracy</small>
+            </div>
+            <div>
+              <span id="streak">0</span>
+              <small>streak</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="problem-area" aria-live="polite">
+          <div class="problem-meta">
+            <span id="difficulty">PDF original</span>
+            <span id="problemCount">1 / 88</span>
+          </div>
+          <div id="expression" class="expression">95 x 30</div>
+          <form id="answerForm" class="answer-form">
+            <input id="answerInput" inputmode="decimal" autocomplete="off" aria-label="Answer" placeholder="Type answer" />
+            <button type="submit">Submit</button>
+            <button id="skipButton" class="ghost-button" type="button">Skip</button>
+          </form>
+          <div id="feedback" class="feedback">Press Enter when ready.</div>
+        </section>
+
+        <section class="drill-row" aria-label="Quick topic summary">
+          <div>
+            <small>Chapter hint</small>
+            <strong id="ruleSummary">Use FOIL/moving down the line.</strong>
+          </div>
+          <div>
+            <small>PDF source</small>
+            <strong id="sourceSummary">Problem Set 1.1</strong>
+          </div>
+          <div>
+            <small>Next focus</small>
+            <strong id="nextFocus">Practice from the section-end exercise set</strong>
+          </div>
+        </section>
+      </main>
+
+      <aside class="coach" aria-label="Shortcut explanation">
+        <div class="coach-header">
+          <span>Shortcut coach</span>
+          <button id="hintButton" class="ghost-button small" type="button">Show hint</button>
+        </div>
+        <article>
+          <h3 id="coachTitle">1.1 Introduction: FOILing When Multiplying</h3>
+          <p id="coachDescription"></p>
+          <ol id="steps"></ol>
+        </article>
+        <div id="hintBox" class="hint-box" hidden></div>
+        <section class="memory-card">
+          <small>Current section</small>
+          <div id="memoryPrompt">1.1</div>
+          <button id="memoryButton" type="button">Count</button>
+          <p id="memoryAnswer" hidden>88 imported questions</p>
+        </section>
+      </aside>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
