@@ -8482,8 +8482,28 @@ const standaloneExerciseNotes = {
   "3.3.1": "This subsection appears in the PDF table of contents, but the PDF does not include a standalone Problem Set 3.3.1. Repeating-decimal practice starts in Problem Set 3.3.2.",
 };
 
+const relatedExerciseSets = {
+  "3.1.2": "3.1.3",
+  "3.2.5": "3.2.6",
+  "3.3.1": "3.3.2",
+};
+
 function buildTechniqueDetail(id, title, hint) {
   return `PDF subsection ${id} technique for "${title}": ${hint}`;
+}
+
+function buildPdfExample(id, problems) {
+  const sourceId = problems.length ? id : relatedExerciseSets[id];
+  const sourceProblems = problems.length ? problems : importedProblemSets[sourceId] || [];
+  if (!sourceProblems.length) {
+    return "PDF example: This subsection is technique-only in the PDF.";
+  }
+
+  const firstProblem = sourceProblems[0];
+  const prompt = displayExpression(getProblemPrompt(firstProblem));
+  const answer = formatAnswer(getProblemAnswer(firstProblem));
+  const sourceLabel = sourceId === id ? `Problem Set ${id}` : `related Problem Set ${sourceId}`;
+  return `PDF example from ${sourceLabel}: ${prompt}${answer ? ` = ${answer}` : ""}`;
 }
 
 const topics = chapterOutline.map(([id, title, group, hint]) => {
@@ -8496,6 +8516,7 @@ const topics = chapterOutline.map(([id, title, group, hint]) => {
     group,
     hint,
     technique: buildTechniqueDetail(id, title, hint),
+    example: buildPdfExample(id, problems),
     problems,
     standaloneNote,
     hasStandaloneExercises,
@@ -8537,6 +8558,7 @@ const els = {
   feedback: document.querySelector("#feedback"),
   ruleSummary: document.querySelector("#ruleSummary"),
   sourceSummary: document.querySelector("#sourceSummary"),
+  exampleSummary: document.querySelector("#exampleSummary"),
   nextFocus: document.querySelector("#nextFocus"),
   coachTitle: document.querySelector("#coachTitle"),
   coachDescription: document.querySelector("#coachDescription"),
@@ -8672,6 +8694,7 @@ function renderCoach() {
   els.topicTitle.textContent = `${t.id} ${t.title}`;
   els.ruleSummary.textContent = t.technique;
   els.sourceSummary.textContent = t.source;
+  els.exampleSummary.textContent = t.example;
   els.nextFocus.textContent = t.problems.length ? "Practice from this subsection's final problem set" : "Technique-only subsection in the PDF";
   els.coachTitle.textContent = `${t.id} ${t.title}`;
   els.coachDescription.textContent =
@@ -8682,6 +8705,7 @@ function renderCoach() {
   [
     `Chapter group: ${t.group}.`,
     `Technique: ${t.technique}`,
+    t.example,
     t.problems.length
       ? `Exercise source: Problem Set ${t.id}, ${t.problems.length} imported questions.`
       : `Exercise source: ${t.standaloneNote}`,
