@@ -97,6 +97,38 @@ small,
   line-height: 1.35;
 }
 
+.topic-controls {
+  display: grid;
+  gap: 8px;
+  padding: 14px 0 0;
+}
+
+.topic-controls label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.topic-controls select,
+.topic-controls input {
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #bccdca;
+  border-radius: 7px;
+  color: var(--ink);
+  background: #ffffff;
+  outline: none;
+}
+
+.topic-controls select:focus,
+.topic-controls input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(14, 111, 104, 0.13);
+}
+
 .topic-list {
   display: grid;
   gap: 10px;

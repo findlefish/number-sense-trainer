@@ -8521,6 +8521,8 @@ let state = {
 
 const els = {
   topicList: document.querySelector("#topicList"),
+  topicJump: document.querySelector("#topicJump"),
+  topicSearch: document.querySelector("#topicSearch"),
   topicTitle: document.querySelector("#topicTitle"),
   modeLabel: document.querySelector("#modeLabel"),
   timer: document.querySelector("#timer"),
@@ -8546,6 +8548,23 @@ const els = {
   memoryButton: document.querySelector("#memoryButton"),
   memoryAnswer: document.querySelector("#memoryAnswer"),
 };
+
+function matchesTopicSearch(topic, query) {
+  if (!query) return true;
+  const haystack = `${topic.id} ${topic.title} ${topic.group}`.toLowerCase();
+  return haystack.includes(query.toLowerCase());
+}
+
+function renderTopicJump() {
+  els.topicJump.innerHTML = "";
+  topics.forEach((topic) => {
+    const option = document.createElement("option");
+    option.value = topic.id;
+    option.textContent = `${topic.id} ${topic.title}`;
+    els.topicJump.append(option);
+  });
+  els.topicJump.value = state.topic.id;
+}
 
 function evaluateExpression(expression) {
   if (!/^[0-9+\-*/().\s]+$/.test(expression)) return NaN;
@@ -8601,14 +8620,26 @@ function almostEqual(input, answer) {
 
 function renderTopics() {
   els.topicList.innerHTML = "";
+  const query = els.topicSearch.value.trim();
+  const visibleTopics = topics.filter((topic) => matchesTopicSearch(topic, query));
+  if (!visibleTopics.length) {
+    const empty = document.createElement("div");
+    empty.className = "topic-group";
+    empty.textContent = "No matching subsections";
+    els.topicList.append(empty);
+    return;
+  }
   const groups = [...new Set(topics.map((topic) => topic.group))];
   groups.forEach((group) => {
+    const groupTopics = visibleTopics.filter((topic) => topic.group === group);
+    if (!groupTopics.length) return;
+
     const groupLabel = document.createElement("div");
     groupLabel.className = "topic-group";
     groupLabel.textContent = group;
     els.topicList.append(groupLabel);
 
-    topics.filter((topic) => topic.group === group).forEach((topic) => {
+    groupTopics.forEach((topic) => {
       const button = document.createElement("button");
       button.className = `topic-button${topic.id === state.topic.id ? " active" : ""}`;
       button.type = "button";
@@ -8628,6 +8659,7 @@ function selectTopic(topic) {
   state.topic = topic;
   state.problemIndex = 0;
   state.streak = 0;
+  els.topicJump.value = topic.id;
   els.feedback.className = "feedback";
   els.feedback.textContent = topic.problems.length ? "Loaded PDF subsection problem set." : topic.standaloneNote;
   renderTopics();
@@ -8765,6 +8797,13 @@ els.challengeButton.addEventListener("click", () => {
   nextProblem();
 });
 
+els.topicJump.addEventListener("change", () => {
+  const topic = topics.find((item) => item.id === els.topicJump.value);
+  if (topic) selectTopic(topic);
+});
+
+els.topicSearch.addEventListener("input", renderTopics);
+
 els.memoryButton.addEventListener("click", () => {
   const t = state.topic;
   els.memoryPrompt.textContent = t.id;
@@ -8773,6 +8812,7 @@ els.memoryButton.addEventListener("click", () => {
   els.memoryButton.textContent = els.memoryAnswer.hidden ? "Count" : "Hide";
 });
 
+renderTopicJump();
 renderTopics();
 renderCoach();
 nextProblem();
