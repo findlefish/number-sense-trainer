@@ -8477,13 +8477,13 @@ const importedProblemSets = {
 };
 
 const standaloneExerciseNotes = {
-  "3.1.2": "PDF 目录中有这个技巧小节，但正文没有单独的 Problem Set 3.1.2；相关练习接在 Problem Set 3.1.3。",
-  "3.2.5": "PDF 目录中有这个技巧小节，但正文没有单独的 Problem Set 3.2.5；相关练习接在 Problem Set 3.2.6。",
-  "3.3.1": "PDF 目录中有这个技巧小节，但正文没有单独的 Problem Set 3.3.1；重复小数练习从 Problem Set 3.3.2 开始。",
+  "3.1.2": "This subsection appears in the PDF table of contents, but the PDF does not include a standalone Problem Set 3.1.2. Related practice continues in Problem Set 3.1.3.",
+  "3.2.5": "This subsection appears in the PDF table of contents, but the PDF does not include a standalone Problem Set 3.2.5. Related practice continues in Problem Set 3.2.6.",
+  "3.3.1": "This subsection appears in the PDF table of contents, but the PDF does not include a standalone Problem Set 3.3.1. Repeating-decimal practice starts in Problem Set 3.3.2.",
 };
 
 function buildTechniqueDetail(id, title, hint) {
-  return `PDF 子章节 ${id}「${title}」的技巧：${hint}`;
+  return `PDF subsection ${id} technique for "${title}": ${hint}`;
 }
 
 const topics = chapterOutline.map(([id, title, group, hint]) => {
@@ -8557,7 +8557,7 @@ function displayExpression(expression) {
     .replaceAll("*", "x")
     .replaceAll("×", "x")
     .replaceAll("/", "÷")
-    .replaceAll("梅", "÷");
+    .replaceAll("\u6885", "÷");
 }
 
 function getProblemPrompt(problem) {
@@ -8644,7 +8644,7 @@ function renderCoach() {
   els.coachTitle.textContent = `${t.id} ${t.title}`;
   els.coachDescription.textContent =
     t.problems.length
-      ? "这些题目按 PDF 目录分类，来自该子章节末尾对应编号的 Problem Set。"
+      ? "These questions are organized by the PDF table of contents and come from the numbered Problem Set at the end of this subsection."
       : t.standaloneNote;
   els.steps.innerHTML = "";
   [
