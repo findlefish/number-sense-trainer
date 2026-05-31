@@ -93,6 +93,103 @@ const chapterOutline = [
   ["3.6.3", "Integration", "Basic Calculus", "Reverse derivative rules and simplify constants early."],
 ];
 
+const originalPdfPath = "./numbersense.pdf";
+
+const pdfPageBySection = {
+  "1.1": 6,
+  "1.2.1": 8,
+  "1.2.2": 10,
+  "1.2.3": 11,
+  "1.2.4": 12,
+  "1.2.5": 13,
+  "1.2.6": 16,
+  "1.2.7": 17,
+  "1.2.8": 19,
+  "1.2.9": 20,
+  "1.2.10": 21,
+  "1.2.11": 23,
+  "1.3.1": 23,
+  "1.3.2": 25,
+  "1.3.3": 28,
+  "1.3.4": 28,
+  "1.3.5": 29,
+  "1.3.6": 30,
+  "1.3.7": 32,
+  "1.3.8": 32,
+  "1.3.9": 34,
+  "1.3.10": 36,
+  "1.4.1": 37,
+  "1.4.2": 38,
+  "1.4.3": 38,
+  "1.4.4": 39,
+  "1.4.5": 40,
+  "1.4.6": 42,
+  "1.4.7": 43,
+  "1.5.1": 44,
+  "1.5.2": 45,
+  "1.5.3": 46,
+  "1.5.4": 46,
+  "1.5.5": 48,
+  "2.1.1": 50,
+  "2.1.2": 52,
+  "2.1.3": 54,
+  "2.1.4": 56,
+  "2.1.5": 60,
+  "2.1.6": 62,
+  "2.1.7": 64,
+  "2.1.8": 64,
+  "2.1.9": 65,
+  "2.1.10": 66,
+  "2.1.11": 67,
+  "2.1.12": 68,
+  "2.2.1": 69,
+  "2.2.2": 72,
+  "2.2.3": 75,
+  "2.2.4": 78,
+  "2.2.5": 78,
+  "2.2.6": 79,
+  "2.2.7": 81,
+  "2.2.8": 83,
+  "2.2.9": 84,
+  "2.2.10": 85,
+  "2.2.11": 86,
+  "2.2.12": 90,
+  "2.2.13": 91,
+  "2.2.14": 92,
+  "2.2.15": 93,
+  "3.1.1": 94,
+  "3.1.2": 96,
+  "3.1.3": 96,
+  "3.1.4": 98,
+  "3.1.5": 99,
+  "3.1.6": 101,
+  "3.1.7": 103,
+  "3.1.8": 105,
+  "3.1.9": 106,
+  "3.1.10": 107,
+  "3.1.11": 109,
+  "3.1.12": 110,
+  "3.1.13": 111,
+  "3.1.14": 113,
+  "3.2.1": 114,
+  "3.2.2": 117,
+  "3.2.3": 118,
+  "3.2.4": 120,
+  "3.2.5": 122,
+  "3.2.6": 122,
+  "3.3.1": 123,
+  "3.3.2": 123,
+  "3.3.3": 124,
+  "3.3.4": 125,
+  "3.4": 125,
+  "3.5.1": 127,
+  "3.5.2": 127,
+  "3.5.3": 128,
+  "3.6.1": 129,
+  "3.6.2": 130,
+  "3.6.3": 131
+};
+
 const importedProblemSets = {
   "1.1": [
     "95 * 30",
@@ -8726,6 +8823,7 @@ const topics = chapterOutline.map(([id, title, group, hint]) => {
   const problems = importedProblemSets[id] || [];
   const standaloneNote = standaloneExerciseNotes[id] || "";
   const hasStandaloneExercises = problems.length > 0;
+  const pdfPage = pdfPageBySection[id] || null;
   return {
     id,
     title,
@@ -8736,6 +8834,8 @@ const topics = chapterOutline.map(([id, title, group, hint]) => {
     problems,
     standaloneNote,
     hasStandaloneExercises,
+    pdfPage,
+    pdfUrl: pdfPage ? `${originalPdfPath}#page=${pdfPage}` : originalPdfPath,
     icon: id.split(".").slice(-1)[0],
     source: hasStandaloneExercises
       ? `Problem Set ${id} (${problems.length} imported from subsection-end exercises)`
@@ -8777,6 +8877,10 @@ const els = {
   steps: document.querySelector("#steps"),
   hintButton: document.querySelector("#hintButton"),
   hintBox: document.querySelector("#hintBox"),
+  pdfPanel: document.querySelector("#pdfPanel"),
+  pdfFrame: document.querySelector("#pdfFrame"),
+  pdfLink: document.querySelector("#pdfLink"),
+  pdfPageLabel: document.querySelector("#pdfPageLabel"),
   challengeButton: document.querySelector("#challengeButton"),
   memoryPrompt: document.querySelector("#memoryPrompt"),
   memoryButton: document.querySelector("#memoryButton"),
@@ -8937,6 +9041,20 @@ function renderCoach() {
   els.hintBox.hidden = true;
   els.hintButton.textContent = "Show hint";
   els.hintBox.textContent = t.hint;
+  if (t.pdfPage) {
+    els.pdfPanel.hidden = false;
+    els.pdfPageLabel.textContent = `Original PDF page ${t.pdfPage}`;
+    els.pdfLink.href = t.pdfUrl;
+    els.pdfFrame.title = `Original PDF page ${t.pdfPage}: ${t.id} ${t.title}`;
+    if (els.pdfFrame.getAttribute("src") !== t.pdfUrl) {
+      els.pdfFrame.setAttribute("src", t.pdfUrl);
+    }
+  } else {
+    els.pdfPanel.hidden = true;
+    els.pdfFrame.removeAttribute("src");
+    els.pdfLink.href = originalPdfPath;
+    els.pdfPageLabel.textContent = "Original PDF page";
+  }
 }
 
 function nextProblem() {
