@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number Sense Trainer</title>
-    <link rel="stylesheet" href="./styles.css?v=20260531-no-count-card" />
+    <link rel="stylesheet" href="./styles.css?v=20260531-pdf-reader-controls" />
   </head>
   <body>
     <div class="app-shell">
@@ -88,13 +88,21 @@
         <section id="pdfPanel" class="pdf-panel" hidden>
           <div class="pdf-panel-header">
             <span id="pdfPageLabel">Original PDF page</span>
-            <a id="pdfLink" class="ghost-link" href="./numbersense.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+            <div class="pdf-controls" aria-label="PDF controls">
+              <button id="pdfPrev" class="ghost-button small" type="button">Prev</button>
+              <button id="pdfZoomOut" class="ghost-button small" type="button">-</button>
+              <span id="pdfZoomLabel" class="pdf-zoom-label">150%</span>
+              <button id="pdfZoomIn" class="ghost-button small" type="button">+</button>
+              <button id="pdfNext" class="ghost-button small" type="button">Next</button>
+              <button id="pdfLarge" class="ghost-button small" type="button">Large</button>
+              <a id="pdfLink" class="ghost-link" href="./numbersense.pdf" target="_blank" rel="noreferrer">Open</a>
+            </div>
           </div>
           <iframe id="pdfFrame" title="Original PDF page"></iframe>
         </section>
       </aside>
     </div>
 
-    <script src="./app.js?v=20260531-no-count-card"></script>
+    <script src="./app.js?v=20260531-pdf-reader-controls"></script>
   </body>
 </html>

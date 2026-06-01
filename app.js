@@ -8835,7 +8835,6 @@ const topics = chapterOutline.map(([id, title, group, hint]) => {
     standaloneNote,
     hasStandaloneExercises,
     pdfPage,
-    pdfUrl: pdfPage ? `${originalPdfPath}#page=${pdfPage}` : originalPdfPath,
     icon: id.split(".").slice(-1)[0],
     source: hasStandaloneExercises
       ? `Problem Set ${id} (${problems.length} imported from subsection-end exercises)`
@@ -8854,7 +8853,12 @@ let state = {
   challenge: false,
   remaining: 600,
   problemIndex: 0,
+  pdfPage: 1,
+  pdfZoom: 150,
+  pdfExpanded: false,
 };
+
+state.pdfPage = state.topic.pdfPage || 1;
 
 const els = {
   topicList: document.querySelector("#topicList"),
@@ -8881,6 +8885,12 @@ const els = {
   pdfFrame: document.querySelector("#pdfFrame"),
   pdfLink: document.querySelector("#pdfLink"),
   pdfPageLabel: document.querySelector("#pdfPageLabel"),
+  pdfPrev: document.querySelector("#pdfPrev"),
+  pdfNext: document.querySelector("#pdfNext"),
+  pdfZoomOut: document.querySelector("#pdfZoomOut"),
+  pdfZoomIn: document.querySelector("#pdfZoomIn"),
+  pdfZoomLabel: document.querySelector("#pdfZoomLabel"),
+  pdfLarge: document.querySelector("#pdfLarge"),
   challengeButton: document.querySelector("#challengeButton"),
 };
 
@@ -9003,6 +9013,7 @@ function selectTopic(topic) {
   state.topic = topic;
   state.problemIndex = 0;
   state.streak = 0;
+  state.pdfPage = topic.pdfPage || 1;
   els.topicJump.value = topic.id;
   if (window.location.hash.slice(1) !== topic.id) {
     window.history.replaceState(null, "", `#${topic.id}`);
@@ -9012,6 +9023,35 @@ function selectTopic(topic) {
   renderTopics();
   renderCoach();
   nextProblem();
+}
+
+function getPdfUrl(page = state.pdfPage, zoom = state.pdfZoom) {
+  return `${originalPdfPath}#page=${page}&zoom=${zoom}`;
+}
+
+function renderPdfViewer() {
+  const t = state.topic;
+  if (!t.pdfPage) {
+    els.pdfPanel.hidden = true;
+    els.pdfFrame.removeAttribute("src");
+    els.pdfLink.href = originalPdfPath;
+    els.pdfPageLabel.textContent = "Original PDF page";
+    return;
+  }
+  const page = Math.max(1, state.pdfPage || t.pdfPage);
+  state.pdfPage = page;
+  const url = getPdfUrl(page);
+  const adjusted = page === t.pdfPage ? "" : ` (section starts at ${t.pdfPage})`;
+  els.pdfPanel.hidden = false;
+  els.pdfPanel.classList.toggle("pdf-expanded", state.pdfExpanded);
+  els.pdfPageLabel.textContent = `Original PDF page ${page}${adjusted}`;
+  els.pdfZoomLabel.textContent = `${state.pdfZoom}%`;
+  els.pdfLarge.textContent = state.pdfExpanded ? "Exit large" : "Large";
+  els.pdfLink.href = url;
+  els.pdfFrame.title = `Original PDF page ${page}: ${t.id} ${t.title}`;
+  if (els.pdfFrame.getAttribute("src") !== url) {
+    els.pdfFrame.setAttribute("src", url);
+  }
 }
 
 function renderCoach() {
@@ -9038,20 +9078,7 @@ function renderCoach() {
   els.hintBox.hidden = true;
   els.hintButton.textContent = "Show hint";
   els.hintBox.textContent = t.hint;
-  if (t.pdfPage) {
-    els.pdfPanel.hidden = false;
-    els.pdfPageLabel.textContent = `Original PDF page ${t.pdfPage}`;
-    els.pdfLink.href = t.pdfUrl;
-    els.pdfFrame.title = `Original PDF page ${t.pdfPage}: ${t.id} ${t.title}`;
-    if (els.pdfFrame.getAttribute("src") !== t.pdfUrl) {
-      els.pdfFrame.setAttribute("src", t.pdfUrl);
-    }
-  } else {
-    els.pdfPanel.hidden = true;
-    els.pdfFrame.removeAttribute("src");
-    els.pdfLink.href = originalPdfPath;
-    els.pdfPageLabel.textContent = "Original PDF page";
-  }
+  renderPdfViewer();
 }
 
 function nextProblem() {
@@ -9142,6 +9169,38 @@ els.skip.addEventListener("click", () => {
 els.hintButton.addEventListener("click", () => {
   els.hintBox.hidden = !els.hintBox.hidden;
   els.hintButton.textContent = els.hintBox.hidden ? "Show hint" : "Hide hint";
+});
+
+els.pdfPrev.addEventListener("click", () => {
+  state.pdfPage = Math.max(1, state.pdfPage - 1);
+  renderPdfViewer();
+});
+
+els.pdfNext.addEventListener("click", () => {
+  state.pdfPage += 1;
+  renderPdfViewer();
+});
+
+els.pdfZoomOut.addEventListener("click", () => {
+  state.pdfZoom = Math.max(80, state.pdfZoom - 25);
+  renderPdfViewer();
+});
+
+els.pdfZoomIn.addEventListener("click", () => {
+  state.pdfZoom = Math.min(250, state.pdfZoom + 25);
+  renderPdfViewer();
+});
+
+els.pdfLarge.addEventListener("click", () => {
+  state.pdfExpanded = !state.pdfExpanded;
+  renderPdfViewer();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.pdfExpanded) {
+    state.pdfExpanded = false;
+    renderPdfViewer();
+  }
 });
 
 els.challengeButton.addEventListener("click", () => {
