@@ -8856,6 +8856,8 @@ let state = {
   pdfPage: 1,
   pdfZoom: 150,
   pdfExpanded: false,
+  pdfDocumentPromise: null,
+  pdfRenderToken: 0,
 };
 
 state.pdfPage = state.topic.pdfPage || 1;
@@ -8882,7 +8884,9 @@ const els = {
   hintButton: document.querySelector("#hintButton"),
   hintBox: document.querySelector("#hintBox"),
   pdfPanel: document.querySelector("#pdfPanel"),
-  pdfFrame: document.querySelector("#pdfFrame"),
+  pdfViewer: document.querySelector("#pdfViewer"),
+  pdfCanvas: document.querySelector("#pdfCanvas"),
+  pdfStatus: document.querySelector("#pdfStatus"),
   pdfLink: document.querySelector("#pdfLink"),
   pdfPageLabel: document.querySelector("#pdfPageLabel"),
   pdfPrev: document.querySelector("#pdfPrev"),
@@ -9029,22 +9033,59 @@ function getPdfUrl(page = state.pdfPage, zoom = state.pdfZoom) {
   return `${originalPdfPath}#page=${page}&zoom=${zoom}`;
 }
 
-function loadPdfFrame(url) {
-  if (els.pdfFrame.dataset.currentPdfUrl === url) return;
-  const nextFrame = els.pdfFrame.cloneNode(false);
-  nextFrame.dataset.currentPdfUrl = url;
-  nextFrame.title = els.pdfFrame.title;
-  nextFrame.setAttribute("src", url);
-  els.pdfFrame.replaceWith(nextFrame);
-  els.pdfFrame = nextFrame;
+function getPdfLib() {
+  if (!window.pdfjsLib) {
+    throw new Error("PDF renderer is still loading. Use Open if this message stays visible.");
+  }
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  return window.pdfjsLib;
+}
+
+async function getPdfDocument() {
+  if (!state.pdfDocumentPromise) {
+    state.pdfDocumentPromise = getPdfLib().getDocument(originalPdfPath).promise;
+  }
+  return state.pdfDocumentPromise;
+}
+
+async function renderPdfCanvas() {
+  const token = ++state.pdfRenderToken;
+  const pageNumber = Math.max(1, state.pdfPage);
+  const zoom = state.pdfZoom / 100;
+  els.pdfStatus.hidden = false;
+  els.pdfStatus.textContent = `Loading page ${pageNumber}...`;
+  try {
+    const doc = await getPdfDocument();
+    const page = await doc.getPage(Math.min(pageNumber, doc.numPages));
+    if (token !== state.pdfRenderToken) return;
+    const viewport = page.getViewport({ scale: zoom });
+    const pixelRatio = window.devicePixelRatio || 1;
+    const canvas = els.pdfCanvas;
+    const context = canvas.getContext("2d");
+    canvas.width = Math.floor(viewport.width * pixelRatio);
+    canvas.height = Math.floor(viewport.height * pixelRatio);
+    canvas.style.width = `${Math.floor(viewport.width)}px`;
+    canvas.style.height = `${Math.floor(viewport.height)}px`;
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    await page.render({ canvasContext: context, viewport }).promise;
+    if (token !== state.pdfRenderToken) return;
+    els.pdfStatus.hidden = true;
+    els.pdfViewer.scrollTop = 0;
+    els.pdfViewer.scrollLeft = 0;
+  } catch (error) {
+    if (token !== state.pdfRenderToken) return;
+    els.pdfStatus.hidden = false;
+    els.pdfStatus.textContent = error.message || "PDF page could not be rendered. Use Open to view the original PDF.";
+  }
 }
 
 function renderPdfViewer() {
   const t = state.topic;
   if (!t.pdfPage) {
     els.pdfPanel.hidden = true;
-    delete els.pdfFrame.dataset.currentPdfUrl;
-    els.pdfFrame.removeAttribute("src");
+    els.pdfCanvas.removeAttribute("width");
+    els.pdfCanvas.removeAttribute("height");
     els.pdfLink.href = originalPdfPath;
     els.pdfPageLabel.textContent = "Original PDF page";
     return;
@@ -9059,8 +9100,7 @@ function renderPdfViewer() {
   els.pdfZoomLabel.textContent = `${state.pdfZoom}%`;
   els.pdfLarge.textContent = state.pdfExpanded ? "Exit large" : "Large";
   els.pdfLink.href = url;
-  els.pdfFrame.title = `Original PDF page ${page}: ${t.id} ${t.title}`;
-  loadPdfFrame(url);
+  renderPdfCanvas();
 }
 
 function renderCoach() {
