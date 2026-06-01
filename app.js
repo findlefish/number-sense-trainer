@@ -9029,10 +9029,21 @@ function getPdfUrl(page = state.pdfPage, zoom = state.pdfZoom) {
   return `${originalPdfPath}#page=${page}&zoom=${zoom}`;
 }
 
+function loadPdfFrame(url) {
+  if (els.pdfFrame.dataset.currentPdfUrl === url) return;
+  const nextFrame = els.pdfFrame.cloneNode(false);
+  nextFrame.dataset.currentPdfUrl = url;
+  nextFrame.title = els.pdfFrame.title;
+  nextFrame.setAttribute("src", url);
+  els.pdfFrame.replaceWith(nextFrame);
+  els.pdfFrame = nextFrame;
+}
+
 function renderPdfViewer() {
   const t = state.topic;
   if (!t.pdfPage) {
     els.pdfPanel.hidden = true;
+    delete els.pdfFrame.dataset.currentPdfUrl;
     els.pdfFrame.removeAttribute("src");
     els.pdfLink.href = originalPdfPath;
     els.pdfPageLabel.textContent = "Original PDF page";
@@ -9049,9 +9060,7 @@ function renderPdfViewer() {
   els.pdfLarge.textContent = state.pdfExpanded ? "Exit large" : "Large";
   els.pdfLink.href = url;
   els.pdfFrame.title = `Original PDF page ${page}: ${t.id} ${t.title}`;
-  if (els.pdfFrame.getAttribute("src") !== url) {
-    els.pdfFrame.setAttribute("src", url);
-  }
+  loadPdfFrame(url);
 }
 
 function renderCoach() {
