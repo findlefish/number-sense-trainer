@@ -219,7 +219,6 @@ small,
 }
 
 .icon-button,
-.memory-card button,
 .answer-form button {
   border: 0;
   border-radius: 7px;
@@ -466,32 +465,6 @@ small,
   background: #f5f7f6;
 }
 
-.memory-card {
-  margin-top: auto;
-  display: grid;
-  gap: 10px;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #e1d2b6;
-  background: #fffaf0;
-}
-
-#memoryPrompt {
-  font-size: 32px;
-  font-weight: 850;
-}
-
-.memory-card button {
-  height: 40px;
-  background: var(--amber);
-}
-
-#memoryAnswer {
-  color: var(--teal-dark);
-  font-size: 22px;
-  font-weight: 850;
-}
-
 @media (max-width: 1050px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -665,7 +638,4 @@ small,
     height: 360px;
   }
 
-  .memory-card {
-    display: none;
-  }
 }

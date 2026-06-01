@@ -8882,9 +8882,6 @@ const els = {
   pdfLink: document.querySelector("#pdfLink"),
   pdfPageLabel: document.querySelector("#pdfPageLabel"),
   challengeButton: document.querySelector("#challengeButton"),
-  memoryPrompt: document.querySelector("#memoryPrompt"),
-  memoryButton: document.querySelector("#memoryButton"),
-  memoryAnswer: document.querySelector("#memoryAnswer"),
 };
 
 function matchesTopicSearch(topic, query) {
@@ -9165,14 +9162,6 @@ els.topicJump.addEventListener("change", () => {
 });
 
 els.topicSearch.addEventListener("input", renderTopics);
-
-els.memoryButton.addEventListener("click", () => {
-  const t = state.topic;
-  els.memoryPrompt.textContent = t.id;
-  els.memoryAnswer.textContent = `${t.problems.length} imported questions`;
-  els.memoryAnswer.hidden = !els.memoryAnswer.hidden;
-  els.memoryButton.textContent = els.memoryAnswer.hidden ? "Count" : "Hide";
-});
 
 renderTopicJump();
 renderTopics();
